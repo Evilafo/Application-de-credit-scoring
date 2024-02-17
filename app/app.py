@@ -134,7 +134,7 @@ def main() :
     
     """
     html_temp3 = """
-    <div class="css-selector2"></div>
+    <p class="css-selector2"></p>
     <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
     
     """
