@@ -9,8 +9,13 @@ import plotly.express as px
 from zipfile import ZipFile
 from sklearn.cluster import KMeans
 plt.style.use('fivethirtyeight')
+sns.set()
 #sns.set_style('darkgrid')
-
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
 
 def main() :
 
