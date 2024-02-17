@@ -110,8 +110,7 @@ def main() :
     <style>
     tabbord {
       /* Couleur par défaut */
-      color: "red";
-      background-color: #fff;
+      color: #93441A;
     }
 
     @media (prefers-color-scheme: dark) {
