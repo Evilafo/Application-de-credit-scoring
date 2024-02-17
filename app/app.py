@@ -109,13 +109,35 @@ def main() :
 
     #Title display
     html_temp = """
-
+    <style>
+    .css-selector2 {
+    background: linear-gradient(to right, yellow, red);
+    background-size: 400% 400%;
+    animation: anim2 5s ease infinite;
+}
+@keyframes anim2 {
+    0%{background-position:0% 100%}
+    15%{background-position:25% 75%}
+    30%{background-position:50% 50%}
+    45%{background-position:75% 25%}
+    60%{background-position:100% 0%}
+    75%{background-position:75% 25%}
+    90%{background-position:50% 50%}
+    100%{background-position:25% 75%}
+}
+    </style>
+    
     <!--<div style="background-color: transparent; padding:5px; border-radius:5px; border-bottom:solid; border-bottom-color:blue; ">
     <h1 style="text-align:center">Tableau de bord Scoring Credit📈💰 </h1>
     </div> -->
     <h1 style="text-align:center">Tableau de bord Scoring Credit📈💰 </h1>
     <div style="background-image: linear-gradient(to right, red , yellow); height:5px;border-radius:5px; "> </div>
     <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
+
+
+<div class="css-selector2">...</div>
+
+    
     """
     st.markdown(html_temp, unsafe_allow_html=True)
 
