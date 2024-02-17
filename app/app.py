@@ -167,7 +167,7 @@ def main() :
         fig, ax = plt.subplots(figsize=(10, 5))
         sns.histplot(data_age, edgecolor = 'k', color="goldenrod", bins=20)
         ax.axvline(int(infos_client["DAYS_BIRTH"].values / 365), color="green", linestyle='--')
-        ax.set(title='Customer age', xlabel='Age(Year)', ylabel='')
+        ax.set(title='Age du client', xlabel='Age(Années)', ylabel='')
         st.pyplot(fig)
     
         
@@ -239,7 +239,7 @@ def main() :
 
     if chk_voisins:
         knn = load_knn(sample)
-        st.markdown("<u>List of the 10 files closest to this Customer :</u>", unsafe_allow_html=True)
+        st.markdown("<u>Liste des 10 dossiers les plus proches de ce Client :</u>", unsafe_allow_html=True)
         st.dataframe(load_kmeans(sample, chk_id, knn))
         st.markdown("<i>Target 1 = Client avec défaut</i>", unsafe_allow_html=True)
     else:
