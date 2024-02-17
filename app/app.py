@@ -226,7 +226,7 @@ def main() :
     st.write(identite_client(data, chk_id))
 
     
-    #Feature importance / description
+    #Feature importance / description // supprimé
     if st.checkbox("Customer ID {:.0f} feature importance ?".format(chk_id)):
         shap.initjs()
         X = sample.iloc[:, :-1]
@@ -239,15 +239,8 @@ def main() :
         shap.summary_plot(shap_values[0], X, plot_type ="bar", max_display=number, color_bar=False, plot_size=(5, 5))
         st.pyplot(fig)
         
-        if st.checkbox("Need help about feature description ?") :
-            list_features = description.index.to_list()
-            feature = st.selectbox('Feature checklist…', list_features)
-            st.table(description.loc[description.index == feature][:1])
-        
-    else:
-        st.markdown("<i>…</i>", unsafe_allow_html=True)
             
-    
+    #Feature importance / description \\ supprimé
 
     #Similar customer files display
     chk_voisins = st.checkbox("Show similar customer files ?")
