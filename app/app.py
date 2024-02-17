@@ -113,7 +113,7 @@ def main() :
     <div style="background-color: transparent; padding:5px; border-radius:5px; border-bottom:solid; border-bottom-color:blue; ">
     <h1 style="text-align:center">Tableau de bord Scoring Credit📈💰 </h1>
     </div>
-    <div style="background-image: linear-gradient(to right, red , yellow); height:400px">. </div>
+    <div style="background-image: linear-gradient(to right, red , yellow); height:50px"> </div>
     <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
