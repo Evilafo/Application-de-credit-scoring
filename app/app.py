@@ -216,7 +216,7 @@ def main() :
         #Relationship Age / Income Total interactive plot 
         data_sk = data.reset_index(drop=False)
         data_sk.DAYS_BIRTH = (data_sk['DAYS_BIRTH']/365).round(1)
-        fig, ax = plt.subplots(figsize=(10, 10))
+        fig, ax = plt.subplots(figsize=(10, 5))
         fig = px.scatter(data_sk, x='DAYS_BIRTH', y="AMT_INCOME_TOTAL", 
                          size="AMT_INCOME_TOTAL", color='CODE_GENDER',
                          hover_data=['NAME_FAMILY_STATUS', 'CNT_CHILDREN', 'NAME_CONTRACT_TYPE', 'SK_ID_CURR'])
