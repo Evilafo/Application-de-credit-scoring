@@ -11,22 +11,6 @@ from sklearn.cluster import KMeans
 plt.style.use('fivethirtyeight')
 sns.set()
 #sns.set_style('darkgrid')
-hide_github_icon = """
-#GithubIcon {
-  visibility: hidden;
-}
-"""
-st.markdown(hide_github_icon, unsafe_allow_html=True)
-
-hide_streamlit_style = """
-            <style>
-            footer {visibility: hidden;}
-            #GithubIcon {
-  visibility: hidden;
-}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 
