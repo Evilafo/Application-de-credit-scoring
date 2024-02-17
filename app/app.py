@@ -202,7 +202,7 @@ def main() :
         fig.update_xaxes(showline=True, linewidth=2, linecolor='#f0f0f0', gridcolor='#cbcbcb',
                          title="Age", title_font=dict(size=18, family='Verdana'))
         fig.update_yaxes(showline=True, linewidth=2, linecolor='#f0f0f0', gridcolor='#cbcbcb',
-                         title="Income Total", title_font=dict(size=18, family='Verdana'))
+                         title="Revenu Total", title_font=dict(size=18, family='Verdana'))
 
         st.plotly_chart(fig)
     
