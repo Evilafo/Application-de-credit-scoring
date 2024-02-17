@@ -114,6 +114,7 @@ def main() :
     background: linear-gradient(to right, yellow, red);
     background-size: 400% 400%;
     animation: anim2 5s ease infinite;
+    height:5px;
 }
 @keyframes anim2 {
     0%{background-position:0% 100%}
@@ -126,17 +127,13 @@ def main() :
     100%{background-position:25% 75%}
 }
     </style>
-    <body>
-    <!--<div style="background-color: transparent; padding:5px; border-radius:5px; border-bottom:solid; border-bottom-color:blue; ">
-    <h1 style="text-align:center">Tableau de bord Scoring Credit📈💰 </h1>
-    </div> -->
+    
     <h1 style="text-align:center">Tableau de bord Scoring Credit📈💰 </h1>
     <div style="background-image: linear-gradient(to right, red , yellow); height:5px;border-radius:5px; "> </div>
     <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
 
 
-<div class="css-selector2">...</div>
-</body>
+<div class="css-selector2"></div>
     
     """
     st.markdown(html_temp, unsafe_allow_html=True)
