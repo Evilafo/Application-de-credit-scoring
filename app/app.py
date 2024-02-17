@@ -110,7 +110,7 @@ def main() :
 
     <div style="background-color: transparent; padding:5px; border-radius:5px; border-bottom:solid; border-bottom-color:blue; ">
     <h1 style="text-align:center">Tableau de bord Scoring Credit </h1>
-    📈📊💰
+    <h1 style="text-align:center">📈📊💰</h1>
     </div>
     <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
     """
