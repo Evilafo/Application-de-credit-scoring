@@ -227,28 +227,6 @@ def main() :
 
     
     #Feature importance / description // supprimé
-    if st.checkbox("Customer ID {:.0f} feature importance ?".format(chk_id)):
-        try:
-            shap.initjs()  # Initialize SHAP JavaScript library
-        except AssertionError:
-            st.error("IPython must be installed to use SHAP visualizations. Please run `pip install ipython`.")
-        else:
-            X = sample.iloc[:, :-1]
-            X = X[X.index == chk_id]
-    
-            number = st.slider("Pick a number of features…", 0, 20, 5)
-    
-            # Load model (assuming load_model() is defined elsewhere)
-            model = load_model()
-    
-            # Create explainer and compute SHAP values
-            explainer = shap.TreeExplainer(model)
-            shap_values = explainer.shap_values(X)
-    
-            # Create and display the plot
-            fig, ax = plt.subplots(figsize=(10, 10))
-            shap.summary_plot(shap_values[0], X, plot_type="bar", max_display=number, color_bar=False, plot_size=(5, 5))
-            st.pyplot(fig)
         
 
 
