@@ -139,7 +139,7 @@ def main() :
     
     #PieChart
     #st.sidebar.markdown("<u>......</u>", unsafe_allow_html=True)
-    fig, ax = plt.subplots(figsize=(3,3))
+    fig, ax = plt.subplots(figsize=(8,8))
     plt.pie(targets, explode=[0, 0.1], labels=['Pas de default', 'Default'], autopct='%1.1f%%', startangle=90)
     st.sidebar.pyplot(fig)
         
