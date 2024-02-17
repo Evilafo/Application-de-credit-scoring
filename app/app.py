@@ -109,6 +109,13 @@ def main() :
 
     #Title display
     html_temp = """
+<h1 style="text-align:center">Tableau de bord Scoring Credit📈💰 </h1>
+    <div style="background-image: linear-gradient(to right, red , yellow); height:5px;border-radius:5px; "> </div>
+    <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
+    """
+    st.markdown(html_temp, unsafe_allow_html=True)
+    
+    html_temp2 = """
     <style>
     .css-selector2 {
     background: linear-gradient(to right, yellow, red);
@@ -127,23 +134,11 @@ def main() :
     100%{background-position:25% 75%}
 }
     </style>
-    
-    <h1 style="text-align:center">Tableau de bord Scoring Credit📈💰 </h1>
-    <div style="background-image: linear-gradient(to right, red , yellow); height:5px;border-radius:5px; "> </div>
-    <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
-
 
 <div class="css-selector2"></div>
     
     """
-
-    html_temp2 = """
-<h1 style="text-align:center">Tableau de bord Scoring Credit📈💰 </h1>
-    <div style="background-image: linear-gradient(to right, red , yellow); height:5px;border-radius:5px; "> </div>
-    <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
-    """
     
-    st.markdown(html_temp, unsafe_allow_html=True)
     st.markdown(html_temp2, unsafe_allow_html=True)
 
     #Customer ID selection
