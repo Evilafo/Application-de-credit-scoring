@@ -132,8 +132,9 @@ def main() :
     100%{background-position:25% 75%}
 }
     </style>
-<p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
-<div class="css-selector2"></div>
+
+    <div class="css-selector2"></div>
+    <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
     
     """
     
