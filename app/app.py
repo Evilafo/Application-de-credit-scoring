@@ -126,7 +126,7 @@ def main() :
     100%{background-position:25% 75%}
 }
     </style>
-    
+    <body>
     <!--<div style="background-color: transparent; padding:5px; border-radius:5px; border-bottom:solid; border-bottom-color:blue; ">
     <h1 style="text-align:center">Tableau de bord Scoring Credit📈💰 </h1>
     </div> -->
@@ -136,7 +136,7 @@ def main() :
 
 
 <div class="css-selector2">...</div>
-
+</body>
     
     """
     st.markdown(html_temp, unsafe_allow_html=True)
