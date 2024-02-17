@@ -109,10 +109,8 @@ def main() :
 
     #Title display
     html_temp = """
-<h1 style="text-align:center">Tableau de bord Scoring Credit📈💰 </h1>
+    <h1 style="text-align:center">Tableau de bord Scoring Credit📈💰 </h1>
     """
-    st.markdown(html_temp, unsafe_allow_html=True)
-    
     html_temp2 = """
     <style>
     .css-selector2 {
@@ -132,13 +130,15 @@ def main() :
     100%{background-position:25% 75%}
 }
     </style>
-
     <div class="css-selector2"></div>
-    <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
     
     """
-    
+    html_temp3 = """
+    <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
+    """
+    st.markdown(html_temp, unsafe_allow_html=True)
     st.markdown(html_temp2, unsafe_allow_html=True)
+    st.markdown(html_temp3, unsafe_allow_html=True)
 
     #Customer ID selection
     st.sidebar.header("**Informations Generales**")
