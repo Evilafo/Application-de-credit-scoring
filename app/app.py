@@ -118,23 +118,25 @@ def main() :
     background-size: 400% 400%;
     animation: anim2 5s ease infinite;
     height:5px;
-}
-@keyframes anim2 {
-    0%{background-position:0% 100%}
-    15%{background-position:25% 75%}
-    30%{background-position:50% 50%}
-    45%{background-position:75% 25%}
-    60%{background-position:100% 0%}
-    75%{background-position:75% 25%}
-    90%{background-position:50% 50%}
-    100%{background-position:25% 75%}
-}
+    }
+    @keyframes anim2 {
+        0%{background-position:0% 100%}
+        15%{background-position:25% 75%}
+        30%{background-position:50% 50%}
+        45%{background-position:75% 25%}
+        60%{background-position:100% 0%}
+        75%{background-position:75% 25%}
+        90%{background-position:50% 50%}
+        100%{background-position:25% 75%}
+    }
     </style>
-    <div class="css-selector2"></div>
+    
     
     """
     html_temp3 = """
+    <div class="css-selector2"></div>
     <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
+    
     """
     st.markdown(html_temp, unsafe_allow_html=True)
     st.markdown(html_temp2, unsafe_allow_html=True)
