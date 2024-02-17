@@ -21,6 +21,9 @@ st.markdown(hide_github_icon, unsafe_allow_html=True)
 hide_streamlit_style = """
             <style>
             footer {visibility: hidden;}
+            #GithubIcon {
+  visibility: hidden;
+}
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
