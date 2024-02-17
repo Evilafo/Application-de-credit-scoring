@@ -107,15 +107,15 @@ def main() :
 
     #Title display
     html_temp = """
-    <div style="background-color: tomato; padding:10px; border-radius:10px">
-    <h1 style="color: white; text-align:center">Dashboard Scoring Credit</h1>
+    <div style="background-color: blue; padding:5px; border-radius:5px">
+    <h1 style="color: white; text-align:center">Tableau de bord Scoring Credit</h1>
     </div>
-    <p style="font-size: 20px; font-weight: bold; text-align:center">Credit decision support…</p>
+    <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
 
     #Customer ID selection
-    st.sidebar.header("**General Info**")
+    st.sidebar.header("**Information Generale**")
 
     #Loading selectbox
     chk_id = st.sidebar.selectbox("Client ID", id_client)
@@ -126,21 +126,21 @@ def main() :
 
     ### Display of information in the sidebar ###
     #Number of loans in the sample
-    st.sidebar.markdown("<u>Number of loans in the sample :</u>", unsafe_allow_html=True)
+    st.sidebar.markdown("<u>Nombre de prêts dans l'échantillon :</u>", unsafe_allow_html=True)
     st.sidebar.text(nb_credits)
 
     #Average income
-    st.sidebar.markdown("<u>Average income (USD) :</u>", unsafe_allow_html=True)
+    st.sidebar.markdown("<u>Revenu moyen (USD) :</u>", unsafe_allow_html=True)
     st.sidebar.text(rev_moy)
 
     #AMT CREDIT
-    st.sidebar.markdown("<u>Average loan amount (USD) :</u>", unsafe_allow_html=True)
+    st.sidebar.markdown("<u>Montant moyen du prêt (USD) :</u>", unsafe_allow_html=True)
     st.sidebar.text(credits_moy)
     
     #PieChart
     #st.sidebar.markdown("<u>......</u>", unsafe_allow_html=True)
     fig, ax = plt.subplots(figsize=(5,5))
-    plt.pie(targets, explode=[0, 0.1], labels=['No default', 'Default'], autopct='%1.1f%%', startangle=90)
+    plt.pie(targets, explode=[0, 0.1], labels=['Pas de default', 'Default'], autopct='%1.1f%%', startangle=90)
     st.sidebar.pyplot(fig)
         
 
@@ -148,13 +148,13 @@ def main() :
     # HOME PAGE - MAIN CONTENT
     #######################################
     #Display Customer ID from Sidebar
-    st.write("Customer ID selection :", chk_id)
+    st.write("Sélection du numéro client : :", chk_id)
 
 
     #Customer information display : Customer Gender, Age, Family status, Children, …
     st.header("**Customer information display**")
 
-    if st.checkbox("Show customer information ?"):
+    if st.checkbox("Afficher les informations client ?"):
 
         infos_client = identite_client(data, chk_id)
         st.write("**Gender : **", infos_client["CODE_GENDER"].values[0])
