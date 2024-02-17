@@ -118,7 +118,7 @@ def main() :
     st.sidebar.header("**Information Generale**")
 
     #Loading selectbox
-    chk_id = st.sidebar.selectbox("Client ID", id_client)
+    chk_id = st.sidebar.selectbox("ID du Client", id_client)
 
     #Loading general info
     nb_credits, rev_moy, credits_moy, targets = load_infos_gen(data)
@@ -152,15 +152,15 @@ def main() :
 
 
     #Customer information display : Customer Gender, Age, Family status, Children, …
-    st.header("**Customer information display**")
+    st.header("**Informations du client**")
 
-    if st.checkbox("Afficher les informations client ?"):
+    if st.checkbox("Afficher les informations du client ?"):
 
         infos_client = identite_client(data, chk_id)
-        st.write("**Gender : **", infos_client["CODE_GENDER"].values[0])
+        st.write("**Genre : **", infos_client["CODE_GENDER"].values[0])
         st.write("**Age : **{:.0f} ans".format(int(infos_client["DAYS_BIRTH"]/365)))
-        st.write("**Family status : **", infos_client["NAME_FAMILY_STATUS"].values[0])
-        st.write("**Number of children : **{:.0f}".format(infos_client["CNT_CHILDREN"].values[0]))
+        st.write("**Statut familial : **", infos_client["NAME_FAMILY_STATUS"].values[0])
+        st.write("**Nombre d'enfant : **{:.0f}".format(infos_client["CNT_CHILDREN"].values[0]))
 
         #Age distribution plot
         data_age = load_age_population(data)
@@ -171,18 +171,18 @@ def main() :
         st.pyplot(fig)
     
         
-        st.subheader("*Income (USD)*")
-        st.write("**Income total : **{:.0f}".format(infos_client["AMT_INCOME_TOTAL"].values[0]))
-        st.write("**Credit amount : **{:.0f}".format(infos_client["AMT_CREDIT"].values[0]))
-        st.write("**Credit annuities : **{:.0f}".format(infos_client["AMT_ANNUITY"].values[0]))
-        st.write("**Amount of property for credit : **{:.0f}".format(infos_client["AMT_GOODS_PRICE"].values[0]))
+        st.subheader("*Revenu (USD)*")
+        st.write("**Revenu total : **{:.0f}".format(infos_client["AMT_INCOME_TOTAL"].values[0]))
+        st.write("**Montant du crédit : **{:.0f}".format(infos_client["AMT_CREDIT"].values[0]))
+        st.write("**Annuité de crédit : **{:.0f}".format(infos_client["AMT_ANNUITY"].values[0]))
+        st.write("**Montant du bien pour crédit : **{:.0f}".format(infos_client["AMT_GOODS_PRICE"].values[0]))
         
         #Income distribution plot
         data_income = load_income_population(data)
         fig, ax = plt.subplots(figsize=(10, 5))
         sns.histplot(data_income["AMT_INCOME_TOTAL"], edgecolor = 'k', color="goldenrod", bins=10)
         ax.axvline(int(infos_client["AMT_INCOME_TOTAL"].values[0]), color="green", linestyle='--')
-        ax.set(title='Customer income', xlabel='Income (USD)', ylabel='')
+        ax.set(title='Revenu du client', xlabel='Revenu (USD)', ylabel='')
         st.pyplot(fig)
         
         #Relationship Age / Income Total interactive plot 
@@ -194,7 +194,7 @@ def main() :
                          hover_data=['NAME_FAMILY_STATUS', 'CNT_CHILDREN', 'NAME_CONTRACT_TYPE', 'SK_ID_CURR'])
 
         fig.update_layout({'plot_bgcolor':'#f0f0f0'}, 
-                          title={'text':"Relationship Age / Income Total", 'x':0.5, 'xanchor': 'center'}, 
+                          title={'text':"Relation Âge / Revenu Total", 'x':0.5, 'xanchor': 'center'}, 
                           title_font=dict(size=20, family='Verdana'), legend=dict(y=1.1, orientation='h'))
 
 
@@ -210,9 +210,9 @@ def main() :
         st.markdown("<i>…</i>", unsafe_allow_html=True)
 
     #Customer solvability display
-    st.header("**Customer file analysis**")
+    st.header("**Analyse du dossier client**")
     prediction = load_prediction(sample, chk_id, clf)
-    st.write("**Default probability : **{:.0f} %".format(round(float(prediction)*100, 2)))
+    st.write("**Probabilité de défaut : **{:.0f} %".format(round(float(prediction)*100, 2)))
 
     #Compute decision according to the best threshold
     #if prediction <= xx :
@@ -222,7 +222,7 @@ def main() :
 
     #st.write("**Decision** *(with threshold xx%)* **: **", decision, unsafe_allow_html=True)
 
-    st.markdown("<u>Customer Data :</u>", unsafe_allow_html=True)
+    st.markdown("<u>Données du client:</u>", unsafe_allow_html=True)
     st.write(identite_client(data, chk_id))
 
     
@@ -235,19 +235,19 @@ def main() :
     #Feature importance / description \\ supprimé
 
     #Similar customer files display
-    chk_voisins = st.checkbox("Show similar customer files ?")
+    chk_voisins = st.checkbox("Afficher les fichiers clients similaires ?")
 
     if chk_voisins:
         knn = load_knn(sample)
         st.markdown("<u>List of the 10 files closest to this Customer :</u>", unsafe_allow_html=True)
         st.dataframe(load_kmeans(sample, chk_id, knn))
-        st.markdown("<i>Target 1 = Customer with default</i>", unsafe_allow_html=True)
+        st.markdown("<i>Target 1 = Client avec défaut</i>", unsafe_allow_html=True)
     else:
         st.markdown("<i>…</i>", unsafe_allow_html=True)
         
         
     st.markdown('***')
-    st.markdown("Thanks for going through this Web App with me! I'd love feedback on this, so if you want to reach out you can find me on [twitter] (https://twitter.com/nalron_) or my [website](https://nalron.com/). *Code from [Github](https://github.com/nalron/project_credit_scoring_model)* ❤️")
+    st.markdown("Par Evilafo")
 
 
 if __name__ == '__main__':
