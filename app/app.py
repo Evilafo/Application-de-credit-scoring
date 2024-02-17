@@ -118,7 +118,7 @@ def main() :
     st.markdown(html_temp, unsafe_allow_html=True)
 
     #Customer ID selection
-    st.sidebar.header("**Information Generale**")
+    st.sidebar.header("**Informations Generales**")
 
     #Loading selectbox
     chk_id = st.sidebar.selectbox("ID du Client", id_client)
@@ -151,7 +151,7 @@ def main() :
     # HOME PAGE - MAIN CONTENT
     #######################################
     #Display Customer ID from Sidebar
-    st.write("Sélection du numéro client : :", chk_id)
+    st.write("Sélection du numéro client :", chk_id)
 
 
     #Customer information display : Customer Gender, Age, Family status, Children, …
