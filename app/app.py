@@ -107,8 +107,23 @@ def main() :
 
     #Title display
     html_temp = """
+    <style>
+    tabbord {
+      /* Couleur par défaut */
+      color: "red";
+      background-color: #fff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      tabbord {
+        /* Couleurs pour le thème sombre */
+        color: #fff;
+      }
+    }
+
+    </style>
     <div style="background-color: transparent; padding:5px; border-radius:5px; border-bottom:solid; border-bottom-color:blue; ">
-    <h1 style="color: white; text-align:center">Tableau de bord Scoring Credit</h1>
+    <h1 class="tabbord" style="text-align:center">Tableau de bord Scoring Credit</h1>
     </div>
     <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
     """
