@@ -246,7 +246,7 @@ def main() :
     #st.write("**Probabilité de défaut : **{:.0f} %".format(round(float(prediction)*100, 2)))
     st.markdown(''':rainbow['Probabilité de défaut']''')
     st.markdown(f"""Probabilité de défaut : {round(float(prediction)*100)} """)
-    st.markdown(f"""Probabilité de défaut : {ppp2} """)
+    st.markdown(f"""Probabilité de défaut : {round(float(prediction)*100)} :rainbow[colors] """)
     #rainbow[colors]
 
     #Compute decision according to the best threshold
