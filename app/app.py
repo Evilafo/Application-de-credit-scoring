@@ -114,20 +114,15 @@ def main() :
     html_temp2 = """
     <style>
     .css-selector2 {
-    background: linear-gradient(to right, yellow, red);
-    background-size: 400% 400%;
-    animation: anim2 5s ease infinite;
+    background: linear-gradient(to left, #ff0000, #fffa00, #ff0000, #fffa00);
+    background-size: 300% 300%;
+    animation: anim 6s ease infinite;
     height:5px;
     }
-    @keyframes anim2 {
-        0%{background-position:0% 100%}
-        15%{background-position:25% 75%}
-        30%{background-position:50% 50%}
-        45%{background-position:75% 25%}
-        60%{background-position:100% 0%}
-        75%{background-position:75% 25%}
-        90%{background-position:50% 50%}
-        100%{background-position:25% 75%}
+    @keyframes anim {
+        0%{background-position:50% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:50% 50%}
     }
     </style>
     
