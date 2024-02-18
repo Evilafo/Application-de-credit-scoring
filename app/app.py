@@ -164,7 +164,7 @@ def main() :
     #PieChart
     #st.sidebar.markdown("<u>......</u>", unsafe_allow_html=True)
     fig, ax = plt.subplots(figsize=(5,5))
-    plt.pie(targets, explode=[0, 0.1], labels=['Pas de default', 'Default'], autopct='%1.1f%%', startangle=90)
+    plt.pie(targets, explode=[0, 0.1], labels=['Pas de defaut', 'Defaut'], autopct='%1.1f%%', startangle=90)
     st.sidebar.pyplot(fig)
         
 
@@ -181,7 +181,7 @@ def main() :
     if st.checkbox("Afficher les informations du client ?"):
 
         infos_client = identite_client(data, chk_id)
-        st.write("**Genre : **", infos_client["CODE_GENDER"].values[0])
+        st.markdown("**Genre : **", infos_client["CODE_GENDER"].values[0])
         st.write("**Age : **{:.0f} ans".format(int(infos_client["DAYS_BIRTH"]/365)))
         st.write("**Statut familial : **", infos_client["NAME_FAMILY_STATUS"].values[0])
         st.write("**Nombre d'enfant : **{:.0f}".format(infos_client["CNT_CHILDREN"].values[0]))
