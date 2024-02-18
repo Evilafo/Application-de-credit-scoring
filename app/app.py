@@ -118,6 +118,7 @@ def main() :
     background-size: 300% 300%;
     animation: anim 6s ease infinite;
     height:5px;
+    border-radius: 50px;
     }
     @keyframes anim {
         0%{background-position:50% 50%}
