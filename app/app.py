@@ -240,7 +240,7 @@ def main() :
     st.header("**Analyse du dossier client**")
     prediction = load_prediction(sample, chk_id, clf)
     #Calcul probabilite
-    ppp = (round(float(prediction)*100, 2))
+    ppp = (round(float(prediction)*100,0))
     
     #st.write("**Probabilité de défaut : **{:.0f} %".format(round(float(prediction)*100, 2)))
     st.markdown(''':rainbow['Probabilité de défaut']''')
