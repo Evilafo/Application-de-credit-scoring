@@ -181,9 +181,9 @@ def main() :
     if st.checkbox("Afficher les informations du client ?"):
 
         infos_client = identite_client(data, chk_id)
-        code_genre =infos_client["CODE_GENDER"].values[0]
-        st.write.markdown(f"**Genre : ** {code_genre} ")
-        #st.write.markdown("**Genre : **", infos_client["CODE_GENDER"].values[0])
+        #code_genre = infos_client["CODE_GENDER"].values[0]
+        #st.write.markdown(f"**Genre : ** {code_genre} ")
+        st.write("**Genre : **", infos_client["CODE_GENDER"].values[0])
         st.write("**Age : **{:.0f} ans".format(int(infos_client["DAYS_BIRTH"]/365)))
         st.write("**Statut familial : **", infos_client["NAME_FAMILY_STATUS"].values[0])
         st.write("**Nombre d'enfant : **{:.0f}".format(infos_client["CNT_CHILDREN"].values[0]))
