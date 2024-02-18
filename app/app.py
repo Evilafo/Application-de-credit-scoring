@@ -241,7 +241,7 @@ def main() :
     prediction = load_prediction(sample, chk_id, clf)
     #Calcul probabilite
     ppp = (round(float(prediction)*100,2))
-    ppp2 = prediction*100
+    ppp2 = round(prediction*100)
     
     #st.write("**Probabilité de défaut : **{:.0f} %".format(round(float(prediction)*100, 2)))
     st.markdown(''':rainbow['Probabilité de défaut']''')
