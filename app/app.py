@@ -238,7 +238,9 @@ def main() :
     #Customer solvability display
     st.header("**Analyse du dossier client**")
     prediction = load_prediction(sample, chk_id, clf)
-    st.write("**Probabilité de défaut : **{:.0f} %".format(round(float(prediction)*100, 2)))
+    #st.write("**Probabilité de défaut : **{:.0f} %".format(round(float(prediction)*100, 2)))
+    st.markdown("** rainbow[Probabilité de défaut] :)
+    #rainbow[colors]
 
     #Compute decision according to the best threshold
     #if prediction <= xx :
