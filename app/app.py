@@ -248,7 +248,7 @@ def main() :
     #st.write("**Probabilité de défaut : **{:.0f} %".format(round(float(prediction)*100, 2)))
     #st.markdown(''':rainbow['Probabilité de défaut']''')
     #st.markdown(f""" Probabilité de défaut : {predict} """)
-    st.markdown(f""" Probabilité de défaut : <b><u> :rainbow[{predict}] %</u></b> """, unsafe_allow_html=True)
+    st.markdown(f""" Probabilité de défaut : <b> :rainbow[{predict} %] </b> """, unsafe_allow_html=True)
     #st.markdown(f"""Probabilité de défaut : {round(float(prediction)*100)} """)
     #rainbow[colors]
 
