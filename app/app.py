@@ -286,7 +286,7 @@ def main() :
         
     st.markdown('***')
     st.markdown("Par Evilafo")
-    st.markdown("*Code from [Github](https://github.com/nalron/project_credit_scoring_model)* ❤️")
+    st.markdown("*Code from [Github](https://github.com/Evilafo)* ")
 
 
 
