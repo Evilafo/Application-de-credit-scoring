@@ -248,7 +248,7 @@ def main() :
     #st.write("**Probabilité de défaut : **{:.0f} %".format(round(float(prediction)*100, 2)))
     #st.markdown(''':rainbow['Probabilité de défaut']''')
     #st.markdown(f""" Probabilité de défaut : {predict} """)
-    st.markdown(f""" Probabilité de défaut : <b><u> :rainbow[{predict}] </u></b> """, unsafe_allow_html=True)
+    st.markdown(f""" Probabilité de défaut : <b><u> :rainbow[{predict}] %</u></b> """, unsafe_allow_html=True)
     #st.markdown(f"""Probabilité de défaut : {round(float(prediction)*100)} """)
     #rainbow[colors]
 
@@ -286,6 +286,8 @@ def main() :
         
     st.markdown('***')
     st.markdown("Par Evilafo")
+    st.markdown("*Code from [Github](https://github.com/nalron/project_credit_scoring_model)* ❤️")
+
 
 
 if __name__ == '__main__':
