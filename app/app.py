@@ -166,7 +166,7 @@ def main() :
     fig, ax = plt.subplots(figsize=(5,5))
     plt.pie(targets, explode=[0, 0.1], labels=['Pas solvable', 'Solvable'], autopct='%1.1f%%', startangle=90)
     st.sidebar.pyplot(fig)
-        
+         
 
     #######################################
     # HOME PAGE - MAIN CONTENT
