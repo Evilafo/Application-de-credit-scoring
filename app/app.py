@@ -44,6 +44,11 @@ def main() :
         knn = knn_training(sample)
         return knn
 
+    def calculate_feature_importance(X, model):
+        importances = model.feature_importances_
+        feature_names = X.columns
+        return pd.Series(importances, index=feature_names)
+
 
     @st.cache
     def load_infos_gen(data):
