@@ -16,7 +16,8 @@ sns.set()
 
 def main() :
 
-    @st.cache
+    #@st.cache
+    @st.cache_resource
     def load_data():
         z = ZipFile("data/default_risk.zip")
         data = pd.read_csv(z.open('default_risk.csv'), index_col='SK_ID_CURR', encoding ='utf-8')
@@ -39,7 +40,8 @@ def main() :
         return clf
 
 
-    @st.cache(allow_output_mutation=True)
+    #@st.cache(allow_output_mutation=True)
+    @st.cache_resource
     def load_knn(sample):
         knn = knn_training(sample)
         return knn
@@ -50,7 +52,8 @@ def main() :
         return pd.Series(importances, index=feature_names)
 
 
-    @st.cache
+    #@st.cache
+    @st.cache_resource
     def load_infos_gen(data):
         lst_infos = [data.shape[0],
                      round(data["AMT_INCOME_TOTAL"].mean(), 2),
@@ -69,24 +72,28 @@ def main() :
         data_client = data[data.index == int(id)]
         return data_client
 
-    @st.cache
+    #@st.cache
+    @st.cache_resource
     def load_age_population(data):
         data_age = round((data["DAYS_BIRTH"]/365), 2)
         return data_age
 
-    @st.cache
+    #@st.cache
+    @st.cache_resource
     def load_income_population(sample):
         df_income = pd.DataFrame(sample["AMT_INCOME_TOTAL"])
         df_income = df_income.loc[df_income['AMT_INCOME_TOTAL'] < 200000, :]
         return df_income
 
-    @st.cache
+    #@st.cache
+    @st.cache_resource
     def load_prediction(sample, id, clf):
         X=sample.iloc[:, :-1]
         score = clf.predict_proba(X[X.index == int(id)])[:,1]
         return score
 
-    @st.cache
+    #@st.cache
+    @st.cache_resource
     def load_kmeans(sample, id, mdl):
         index = sample[sample.index == int(id)].index.values
         index = index[0]
@@ -95,7 +102,8 @@ def main() :
         df_neighbors = pd.concat([df_neighbors, data], axis=1)
         return df_neighbors.iloc[:,1:].sample(10)
 
-    @st.cache
+    #@st.cache
+    @st.cache_resource
     def knn_training(sample):
         knn = KMeans(n_clusters=2).fit(sample)
         return knn 
