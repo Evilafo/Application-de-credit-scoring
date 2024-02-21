@@ -164,7 +164,7 @@ def main() :
     #PieChart
     #st.sidebar.markdown("<u>......</u>", unsafe_allow_html=True)
     fig, ax = plt.subplots(figsize=(5,5))
-    plt.pie(targets, explode=[0, 0.1], labels=['Pas de defaut', 'Defaut'], autopct='%1.1f%%', startangle=90)
+    plt.pie(targets, explode=[0, 0.1], labels=['Pas solvable', 'Solvable'], autopct='%1.1f%%', startangle=90)
     st.sidebar.pyplot(fig)
         
 
@@ -248,7 +248,7 @@ def main() :
     #st.write("**Probabilité de défaut : **{:.0f} %".format(round(float(prediction)*100, 2)))
     #st.markdown(''':rainbow['Probabilité de défaut']''')
     #st.markdown(f""" Probabilité de défaut : {predict} """)
-    st.markdown(f""" Probabilité de défaut : <b> :rainbow[{predict} %] </b> """, unsafe_allow_html=True)
+    st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] </b> """, unsafe_allow_html=True)
     #st.markdown(f"""Probabilité de défaut : {round(float(prediction)*100)} """)
     #rainbow[colors]
 
@@ -260,8 +260,18 @@ def main() :
 
     #st.write("**Decision** *(with threshold xx%)* **: **", decision, unsafe_allow_html=True)
 
+    
+    
+    #st.markdown("<u>Données du client:</u>", unsafe_allow_html=True)
+    #st.write(identite_client(data, chk_id))
+
+
     st.markdown("<u>Données du client:</u>", unsafe_allow_html=True)
-    st.write(identite_client(data, chk_id))
+    idcli = identite_client(data, chk_id)
+    idcli2 = idcli.copy()
+    idcli2.drop('TARGET', axis=1, inplace=True)
+    idcli2.insert(0, 'TARGET', idcli['TARGET'])
+    st.write(idcli2)
 
     
     #Feature importance / description // supprimé
@@ -273,13 +283,30 @@ def main() :
     #Feature importance / description \\ supprimé
 
     #Similar customer files display
-    chk_voisins = st.checkbox("Afficher les fichiers clients similaires ?")
+    chk_voisins = st.checkbox("Afficher les dossiers similaires ?")
 
     if chk_voisins:
+        #knn = load_knn(sample)
+        #st.markdown("<u>Liste des 10 dossiers les plus proches de ce Client :</u>", unsafe_allow_html=True)
+        #st.dataframe(load_kmeans(sample, chk_id, knn))
+        #st.markdown("<i>Target 1 = Client non solvables</i>", unsafe_allow_html=True)
+
+
         knn = load_knn(sample)
         st.markdown("<u>Liste des 10 dossiers les plus proches de ce Client :</u>", unsafe_allow_html=True)
-        st.dataframe(load_kmeans(sample, chk_id, knn))
-        st.markdown("<i>Target 1 = Client avec défaut</i>", unsafe_allow_html=True)
+        dossier_proche1 = load_kmeans(sample, chk_id, knn)
+        dossier_proche2 = dossier_proche1.copy()
+        dossier_proche2.drop('TARGET', axis=1, inplace=True)
+        dossier_proche2.insert(0, 'TARGET', dossier_proche1['TARGET'])
+        st.dataframe(dossier_proche2)
+        st.markdown("<i>Target 1 = Clients non solvables</i>", unsafe_allow_html=True)
+
+    
+
+    
+
+
+    
     else:
         st.markdown("<i>…</i>", unsafe_allow_html=True)
         
