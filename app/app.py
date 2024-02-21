@@ -215,7 +215,8 @@ def main() :
         st.write("**Revenu total : **{:.0f}".format(infos_client["AMT_INCOME_TOTAL"].values[0]))
         st.write("**Montant du crédit : **{:.0f}".format(infos_client["AMT_CREDIT"].values[0]))
         st.write("**Annuité de crédit : **{:.0f}".format(infos_client["AMT_ANNUITY"].values[0]))
-        st.write("**Montant du bien pour crédit : **{:.0f}".format(infos_client["AMT_GOODS_PRICE"].values[0]))
+        #st.write("**Montant du bien pour crédit : **{:.0f}".format(infos_client["AMT_GOODS_PRICE"].values[0]))
+        st.write("**Montant du bien pour pour lequel le prêt est accordé : **{:.0f}".format(infos_client["AMT_GOODS_PRICE"].values[0])) 
         
         #Income distribution plot
         data_income = load_income_population(data)
