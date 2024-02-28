@@ -361,7 +361,7 @@ def main() :
         
         
     st.markdown('***')
-    st.markdown("Par Evilafo")
+    st.markdown("Par Emmanuel Evilafo")
     st.markdown("*Code from [Github](https://github.com/Evilafo)* ")
 
 
