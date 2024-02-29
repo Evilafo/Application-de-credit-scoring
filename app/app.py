@@ -269,16 +269,21 @@ def main() :
 
     if predict < 1 :
         message = "Très faible"
+        couleur = "green "
     elif predict < 5 :
         message = "Faible"
+        couleur = "green "
     elif predict < 10 :
         message = "Moyen"
+        couleur = "Blue "
     elif predict < 20 :
         message = "Elevé"
+        couleur = "orange "
     elif predict >= 20 :
-        message = "Très élevé"   
+        message = "Très élevé"
+        couleur = "rouge"   
     
-    st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] {message} </b> """, unsafe_allow_html=True)
+    st.markdown(f""" Probabilité de risque de défaut : <b> :{couleur}[{predict}%] {message} </b> """, unsafe_allow_html=True)
     #if predict < 10 :    
     #    st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] </b> """, unsafe_allow_html=True)
     #else :
