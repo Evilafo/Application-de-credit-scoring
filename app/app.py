@@ -286,7 +286,7 @@ def main() :
     elif predict >= 20 :
         message = "Très élevé"
         couleur = "rouge"
-        st.markdown(f""" Probabilité de risque de défaut : <b> :orange[{predict}%] </b> """, unsafe_allow_html=True)   
+        st.markdown(f""" Probabilité de risque de défaut : <b> :couleur[{predict}%] {message} </b> """, unsafe_allow_html=True)   
     
     #st.markdown(f""" Probabilité de risque de défaut : <b> :{couleur}[{predict}%] {message} green[hola] </b> """, unsafe_allow_html=True)
     #st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] </b> """, unsafe_allow_html=True)
