@@ -270,11 +270,11 @@ def main() :
     if predict < 1 :
         message = "Très faible"
         couleur = "green "
-        st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] green[{message}] </b> """, unsafe_allow_html=True)
+        st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] :green[{message}] </b> """, unsafe_allow_html=True)
     elif predict < 5 :
         message = "Faible"
         couleur = "green "
-        st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] green[{message}] </b> """, unsafe_allow_html=True)
+        st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] :green[{message}] </b> """, unsafe_allow_html=True)
     elif predict < 10 :
         message = "Moyen"
         couleur = "Blue "
@@ -286,7 +286,7 @@ def main() :
     elif predict >= 20 :
         message = "Très élevé"
         couleur = "rouge"
-        st.markdown(f""" Probabilité de risque de défaut : <b> :red[{predict}%] {message} </b> """, unsafe_allow_html=True)   
+        st.markdown(f""" Probabilité de risque de défaut : <b> :red[{predict}%] :{couleur}[{message}] </b> """, unsafe_allow_html=True)   
     
     #st.markdown(f""" Probabilité de risque de défaut : <b> :{couleur}[{predict}%] {message} green[hola] </b> """, unsafe_allow_html=True)
     #st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] </b> """, unsafe_allow_html=True)
