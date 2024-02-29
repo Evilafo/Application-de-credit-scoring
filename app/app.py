@@ -270,7 +270,7 @@ def main() :
     if predict < 1 :
         message = "Très faible"
         couleur = "green "
-        st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] {message} </b> """, unsafe_allow_html=True)
+        st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] green[{message}] </b> """, unsafe_allow_html=True)
     elif predict < 5 :
         message = "Faible"
         couleur = "green "
