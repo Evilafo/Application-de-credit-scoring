@@ -275,8 +275,8 @@ def main() :
         message = "Moyen"
     elif predict < 20 :
         message = "Elevé"
-    elif predict > 20 :
-        message >= "Très élevé"   
+    elif predict >= 20 :
+        message = "Très élevé"   
     
     st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] {message} </b> """, unsafe_allow_html=True)
     #if predict < 10 :    
