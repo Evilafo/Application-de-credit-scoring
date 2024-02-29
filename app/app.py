@@ -284,7 +284,7 @@ def main() :
         couleur = "rouge"   
     
     #st.markdown(f""" Probabilité de risque de défaut : <b> :{couleur}[{predict}%] {message} green[hola] </b> """, unsafe_allow_html=True)
-    st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict}%] </b> """, unsafe_allow_html=True)
+    st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] </b> """, unsafe_allow_html=True)
 
     #if predict < 10 :    
     #    st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] </b> """, unsafe_allow_html=True)
