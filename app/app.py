@@ -263,15 +263,26 @@ def main() :
     #st.markdown(''':rainbow['Probabilité de défaut']''')
     #st.markdown(f""" Probabilité de défaut : {predict} """)
     
-    #st.markdown(f""" Probabilité de risque de défaut : <b> :red[{predict} %] </b> """, unsafe_allow_html=True)
-
+    #st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] </b> """, unsafe_allow_html=True)
 
     
-    if predict < 20 :    
-        st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] </b> """, unsafe_allow_html=True)
-    else :
-        st.markdown(f""" Probabilité de risque de défaut : <b> :red[{predict} %] </b> """, unsafe_allow_html=True)
+
+    if predict < 1 :
+        message = "Très faible"
+    elif predict < 5 :
+        message = "Faible"
+    elif predict < 10 :
+        message = "Moyen"
+    elif predict < 20 :
+        message = "Elevé"
+    elif predict > 20 :
+        message >= "Très élevé"   
     
+    st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] {message} </b> """, unsafe_allow_html=True)
+    #if predict < 10 :    
+    #    st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] </b> """, unsafe_allow_html=True)
+    #else :
+    #    st.markdown(f""" Probabilité de risque de défaut : <b> :red[{predict} %] </b> """, unsafe_allow_html=True)
 
 
     #st.markdown(f"""Probabilité de défaut : {round(float(prediction)*100)} """)
