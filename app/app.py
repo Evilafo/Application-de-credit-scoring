@@ -12,7 +12,7 @@ plt.style.use('fivethirtyeight')
 sns.set()
 #sns.set_style('darkgrid')
 
-
+st.set_page_config(page_title='Dashbord de Credit Scoring' ,layout="wide",page_icon='👨‍🔬')
 
 def main() :
 
