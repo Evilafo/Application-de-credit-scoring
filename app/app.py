@@ -323,46 +323,8 @@ def main() :
 
     
     #Feature importance / description // supprimé
-    feachimpcach =     
-    """
-    if st.checkbox("Afficher l'importance des variables Customer ID {:.0f} ?".format(chk_id)):
-        X = sample.iloc[:, :-1]
-        X = X[X.index == chk_id]
-        #number = st.slider("Pick a number of features…", 0, 20, 5)
-
-        # Load features and calculate feature importance (replace with your code)
-        importance_data = calculate_feature_importance(X, load_model())  # Placeholder function
-
-        # Convert to a format suitable for Seaborn
-        df_importance = pd.DataFrame({'Feature': importance_data.index, 'Importance': importance_data.values})
-
-        # Create horizontal bar chart using Seaborn
-        fig, ax = plt.subplots(figsize=(30, 30))
-        sns.barplot(x="Importance", y="Feature", data=df_importance.sort_values(by="Importance", ascending=False), palette="RdGy")
-        #sns.barplot(x="Importance", y="Feature", data=df_importance.sort_values(by="Importance", ascending=False), palette="Blues_d")
-        plt.xlabel("Importance des variables")
-        plt.ylabel("Variable")
-        plt.title("Importance des variables pour chaque ID client {:.0f}".format(chk_id))
-        plt.gca().invert_yaxis()  # Optional: Show most important features at the top
-        plt.tight_layout()
-        df_importance2 = pd.DataFrame({'Feature': importance_data.index, 'Importance': importance_data.values}).sort_values(by='Importance', ascending=True)
-        st.dataframe(df_importance2)
-
-        st.pyplot(fig)
-
-
-
-
-
-
-
-        
-
-    else:
-        st.markdown("<i>…</i>", unsafe_allow_html=True)
-
-
-    """
+         
+    
     #Feature importance / description \\ supprimé
 
     #Similar customer files display
