@@ -324,7 +324,7 @@ def main() :
     
     #Feature importance / description // supprimé
         
-
+    """
     if st.checkbox("Afficher l'importance des variables Customer ID {:.0f} ?".format(chk_id)):
         X = sample.iloc[:, :-1]
         X = X[X.index == chk_id]
@@ -362,7 +362,7 @@ def main() :
         st.markdown("<i>…</i>", unsafe_allow_html=True)
 
 
-    
+    """
     #Feature importance / description \\ supprimé
 
     #Similar customer files display
@@ -396,7 +396,7 @@ def main() :
         
     st.markdown('***')
     st.markdown("Par Emmanuel Evilafo")
-    st.markdown("*Code from [Github](https://github.com/Evilafo)* ")
+    #st.markdown("*Code from [Github](https://github.com/Evilafo)* ")
 
 
 
