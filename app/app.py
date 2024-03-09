@@ -323,7 +323,7 @@ def main() :
 
     
     #Feature importance / description // supprimé
-        
+    feachimpcach =     
     """
     if st.checkbox("Afficher l'importance des variables Customer ID {:.0f} ?".format(chk_id)):
         X = sample.iloc[:, :-1]
