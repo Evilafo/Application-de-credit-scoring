@@ -1,220 +1,220 @@
-﻿;Table;Row;Description
-1;application_{train|test}.csv;SK_ID_CURR;ID de prêt dans notre échantillon
-2;application_{train|test}.csv;TARGET;Variable cible (1 - Client avec difficultés de paiement: il a eu un paiement en retard plus de x jours sur au moins l'un des premiers versements du prêt dans notre échantillon, 0 - tous les autres cas)
-5;application_{train|test}.csv;NAME_CONTRACT_TYPE;Identification si le prêt est en espèces ou renouvelable
-6;application_{train|test}.csv;CODE_GENDER;Sexe du client
-7;application_{train|test}.csv;FLAG_OWN_CAR;Indicateur si le client possède une voiture
-8;application_{train|test}.csv;FLAG_OWN_REALTY;Indicateur si le client est propriétaire d'une maison ou d'un appartement
-9;application_{train|test}.csv;CNT_CHILDREN;Nombre d'enfants du client
-10;application_{train|test}.csv;AMT_INCOME_TOTAL;Revenu du client
-11;application_{train|test}.csv;AMT_CREDIT;Montant de crédit du prêt
-12;application_{train|test}.csv;AMT_ANNUITY;Annuité de prêt
-13;application_{train|test}.csv;AMT_GOODS_PRICE;Pour les prêts à la consommation, c'est le prix des biens pour lesquelles le prêt est accordé
-14;application_{train|test}.csv;NAME_TYPE_SUITE;Qui accompagnait le client lorsqu'il demandait le prêt
-15;application_{train|test}.csv;NAME_INCOME_TYPE;Type de revenu des clients (homme d'affaires, travail, congé de maternité, Ö)
-16;application_{train|test}.csv;NAME_EDUCATION_TYPE;Niveau de l'éducation la plus élevée que le client a atteint
-17;application_{train|test}.csv;NAME_FAMILY_STATUS;Statut familial du client
-18;application_{train|test}.csv;NAME_HOUSING_TYPE;Quelle est la situation du logement du client (louer, vivre avec les parents, ...)
-19;application_{train|test}.csv;REGION_POPULATION_RELATIVE;Population normalisée de la région où vit le client (un nombre plus élevé signifie que le client vit dans une région plus peuplée)
-20;application_{train|test}.csv;DAYS_BIRTH;L'âge du client dans les jours au moment de la demande
-21;application_{train|test}.csv;DAYS_EMPLOYED;Combien de jours avant la demande, la personne a commencé l'emploi actuel
-22;application_{train|test}.csv;DAYS_REGISTRATION;Combien de jours avant la demande le client a-t-il modifié son inscription
-23;application_{train|test}.csv;DAYS_ID_PUBLISH;Combien de jours avant la demande le client a-t-il modifié le document d'identité avec lequel il a postulé pour le prêt
-24;application_{train|test}.csv;OWN_CAR_AGE;Âge de la voiture du client
-25;application_{train|test}.csv;FLAG_MOBIL;Le client a-t-il fourni un téléphone mobile (1 = oui, 0 = non)
-26;application_{train|test}.csv;FLAG_EMP_PHONE;Le client a-t-il fourni un téléphone de travail (1 = oui, 0 = non)
-27;application_{train|test}.csv;FLAG_WORK_PHONE;Le client a-t-il fourni un téléphone à domicile (1 = oui, 0 = non)
-28;application_{train|test}.csv;FLAG_CONT_MOBILE;Le téléphone mobile était-il accessible (1 = oui, 0 = non)
-29;application_{train|test}.csv;FLAG_PHONE;Le client a-t-il fourni un téléphone à domicile (1 = oui, 0 = non)
-30;application_{train|test}.csv;FLAG_EMAIL;Le client a-t-il fourni un e-mail (1 = oui, 0 = non)
-31;application_{train|test}.csv;OCCUPATION_TYPE;Quel type d'occupation le client a-t-il
-32;application_{train|test}.csv;CNT_FAM_MEMBERS;Combien de membres de la famille a-t-il le client
-33;application_{train|test}.csv;REGION_RATING_CLIENT;Notre note de la région où vit le client (1,2,3)
-34;application_{train|test}.csv;REGION_RATING_CLIENT_W_CITY;Notre note de la région où le client vit avec la prise en compte de la ville (1,2,3)
-35;application_{train|test}.csv;WEEKDAY_APPR_PROCESS_START;Quel jour de la semaine le client a-t-il demandé le prêt
-36;application_{train|test}.csv;HOUR_APPR_PROCESS_START;Environ à quelle heure le client a-t-il demandé le prêt
-37;application_{train|test}.csv;REG_REGION_NOT_LIVE_REGION;Indicateur Si l'adresse permanente du client ne correspond pas à l'adresse de contact (1 = différente, 0 = même, au niveau de la région)
-38;application_{train|test}.csv;REG_REGION_NOT_WORK_REGION;Indicateur si l'adresse permanente du client ne correspond pas à l'adresse du lieu de travail (1=différente, 0=même, au niveau de la région)
-39;application_{train|test}.csv;LIVE_REGION_NOT_WORK_REGION;Indicateur Si l'adresse de contact du client ne correspond pas à l'adresse de travail (1 = différente, 0 = même, au niveau de la région)
-40;application_{train|test}.csv;REG_CITY_NOT_LIVE_CITY;Indicateur Si l'adresse permanente du client ne correspond pas à l'adresse de contact (1 = différent, 0 = même, au niveau de la ville)
-41;application_{train|test}.csv;REG_CITY_NOT_WORK_CITY;Indicateur Si l'adresse permanente du client ne correspond pas à l'adresse de travail (1 = différente, 0 = même, au niveau de la ville)
-42;application_{train|test}.csv;LIVE_CITY_NOT_WORK_CITY;Indicateur Si l'adresse de contact du client ne correspond pas à l'adresse de travail (1 = différente, 0 = même, au niveau de la ville)
-43;application_{train|test}.csv;ORGANIZATION_TYPE;Type d'organisation où le client travaille
-44;application_{train|test}.csv;EXT_SOURCE_1;Score normalisé de la source de données externe
-45;application_{train|test}.csv;EXT_SOURCE_2;Score normalisé de la source de données externe
-46;application_{train|test}.csv;EXT_SOURCE_3;Score normalisé de la source de données externe
-47;application_{train|test}.csv;APARTMENTS_AVG;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-48;application_{train|test}.csv;BASEMENTAREA_AVG;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-49;application_{train|test}.csv;YEARS_BEGINEXPLUATATION_AVG;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-50;application_{train|test}.csv;YEARS_BUILD_AVG;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-51;application_{train|test}.csv;COMMONAREA_AVG;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-52;application_{train|test}.csv;ELEVATORS_AVG;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-53;application_{train|test}.csv;ENTRANCES_AVG;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-54;application_{train|test}.csv;FLOORSMAX_AVG;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-55;application_{train|test}.csv;FLOORSMIN_AVG;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-56;application_{train|test}.csv;LANDAREA_AVG;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-57;application_{train|test}.csv;LIVINGAPARTMENTS_AVG;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-58;application_{train|test}.csv;LIVINGAREA_AVG;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-59;application_{train|test}.csv;NONLIVINGAPARTMENTS_AVG;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-60;application_{train|test}.csv;NONLIVINGAREA_AVG;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-61;application_{train|test}.csv;APARTMENTS_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-62;application_{train|test}.csv;BASEMENTAREA_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-63;application_{train|test}.csv;YEARS_BEGINEXPLUATATION_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-64;application_{train|test}.csv;YEARS_BUILD_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-65;application_{train|test}.csv;COMMONAREA_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-66;application_{train|test}.csv;ELEVATORS_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-67;application_{train|test}.csv;ENTRANCES_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-68;application_{train|test}.csv;FLOORSMAX_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-69;application_{train|test}.csv;FLOORSMIN_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-70;application_{train|test}.csv;LANDAREA_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-71;application_{train|test}.csv;LIVINGAPARTMENTS_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-72;application_{train|test}.csv;LIVINGAREA_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-73;application_{train|test}.csv;NONLIVINGAPARTMENTS_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-74;application_{train|test}.csv;NONLIVINGAREA_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-75;application_{train|test}.csv;APARTMENTS_MEDI;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-76;application_{train|test}.csv;BASEMENTAREA_MEDI;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-77;application_{train|test}.csv;YEARS_BEGINEXPLUATATION_MEDI;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-78;application_{train|test}.csv;YEARS_BUILD_MEDI;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-79;application_{train|test}.csv;COMMONAREA_MEDI;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-80;application_{train|test}.csv;ELEVATORS_MEDI;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-81;application_{train|test}.csv;ENTRANCES_MEDI;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-82;application_{train|test}.csv;FLOORSMAX_MEDI;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-83;application_{train|test}.csv;FLOORSMIN_MEDI;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-84;application_{train|test}.csv;LANDAREA_MEDI;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-85;application_{train|test}.csv;LIVINGAPARTMENTS_MEDI;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-86;application_{train|test}.csv;LIVINGAREA_MEDI;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-87;application_{train|test}.csv;NONLIVINGAPARTMENTS_MEDI;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-88;application_{train|test}.csv;NONLIVINGAREA_MEDI;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-89;application_{train|test}.csv;FONDKAPREMONT_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-90;application_{train|test}.csv;HOUSETYPE_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-91;application_{train|test}.csv;TOTALAREA_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-92;application_{train|test}.csv;WALLSMATERIAL_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-93;application_{train|test}.csv;EMERGENCYSTATE_MODE;Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
-94;application_{train|test}.csv;OBS_30_CNT_SOCIAL_CIRCLE;Combien d'observation de l'environnement social du client avec un DPD observable (jours après)
-95;application_{train|test}.csv;DEF_30_CNT_SOCIAL_CIRCLE;Combien d'observation de l'environnement social du client a fait défaut sur 30 DPD (jours après)
-96;application_{train|test}.csv;OBS_60_CNT_SOCIAL_CIRCLE;Combien d'observation de l'environnement social du client avec un DPD observable (jours passés) par défaut
-97;application_{train|test}.csv;DEF_60_CNT_SOCIAL_CIRCLE;Combien d'observation de l'environnement social du client a fait défaut sur 60 (jours passés dû) DPD
-98;application_{train|test}.csv;DAYS_LAST_PHONE_CHANGE;Combien de jours avant l'application le client a-t-il changé de téléphone
-99;application_{train|test}.csv;FLAG_DOCUMENT_2;Le client a-t-il fourni le document 2
-100;application_{train|test}.csv;FLAG_DOCUMENT_3;Le client a-t-il fourni un document 3
-101;application_{train|test}.csv;FLAG_DOCUMENT_4;Le client a-t-il fourni un document 4
-102;application_{train|test}.csv;FLAG_DOCUMENT_5;Le client a-t-il fourni le document 5
-103;application_{train|test}.csv;FLAG_DOCUMENT_6;Le client a-t-il fourni un document 6
-104;application_{train|test}.csv;FLAG_DOCUMENT_7;Le client a-t-il fourni le document 7
-105;application_{train|test}.csv;FLAG_DOCUMENT_8;Le client a-t-il fourni un document 8
-106;application_{train|test}.csv;FLAG_DOCUMENT_9;Le client a-t-il fourni le document 9
-107;application_{train|test}.csv;FLAG_DOCUMENT_10;Le client a-t-il fourni le document 10
-108;application_{train|test}.csv;FLAG_DOCUMENT_11;Le client a-t-il fourni le document 11
-109;application_{train|test}.csv;FLAG_DOCUMENT_12;Le client a-t-il fourni un document 12
-110;application_{train|test}.csv;FLAG_DOCUMENT_13;Le client a-t-il fourni le document 13
-111;application_{train|test}.csv;FLAG_DOCUMENT_14;Le client a-t-il fourni le document 14
-112;application_{train|test}.csv;FLAG_DOCUMENT_15;Le client a-t-il fourni un document 15
-113;application_{train|test}.csv;FLAG_DOCUMENT_16;Le client a-t-il fourni un document 16
-114;application_{train|test}.csv;FLAG_DOCUMENT_17;Le client a-t-il fourni le document 17
-115;application_{train|test}.csv;FLAG_DOCUMENT_18;Le client a-t-il fourni un document 18
-116;application_{train|test}.csv;FLAG_DOCUMENT_19;Le client a-t-il fourni le document 19
-117;application_{train|test}.csv;FLAG_DOCUMENT_20;Le client a-t-il fourni un document 20
-118;application_{train|test}.csv;FLAG_DOCUMENT_21;Le client a-t-il fourni le document 21
-119;application_{train|test}.csv;AMT_REQ_CREDIT_BUREAU_HOUR;Nombre de demandes de renseignements sur le Bureau de créditer sur le client une heure avant la demande
-120;application_{train|test}.csv;AMT_REQ_CREDIT_BUREAU_DAY;Nombre de demandes de renseignements sur le Bureau du client un jour avant la demande (à l'exclusion d'une heure avant la demande)
-121;application_{train|test}.csv;AMT_REQ_CREDIT_BUREAU_WEEK;Nombre de demandes de renseignements sur le Bureau de crédibilité sur le client une semaine avant la demande (à l'exclusion un jour avant la demande)
-122;application_{train|test}.csv;AMT_REQ_CREDIT_BUREAU_MON;Nombre de demandes de renseignements au Bureau de crédits sur le client un mois avant la demande (à l'exclusion d'une semaine avant la demande)
-123;application_{train|test}.csv;AMT_REQ_CREDIT_BUREAU_QRT;Nombre de demandes de renseignements sur le Bureau de crédits sur le client 3 mois avant la demande (à l'exclusion d'un mois avant la demande)
-124;application_{train|test}.csv;AMT_REQ_CREDIT_BUREAU_YEAR;Nombre de demandes de renseignements sur le Bureau du Client un jour un jour (à l'exception des 3 derniers mois avant la demande)
-125;bureau.csv;SK_ID_CURR;ID de prêt dans notre échantillon - Un prêt dans notre échantillon peut avoir 0,1,2 ou plusieurs crédits antérieurs liés au Credit Bureau
-126;bureau.csv;SK_BUREAU_ID;ID recodé du crédit du Bureau de crédit précédent lié à notre prêt (codage unique pour chaque demande de prêt)
-127;bureau.csv;CREDIT_ACTIVE;Le statut du Bureau du crédit (CB) a déclaré des crédits
-128;bureau.csv;CREDIT_CURRENCY;RECODED CARRENCY DU CRÉDIT DU BUREAU DE CRÉDIT
-129;bureau.csv;DAYS_CREDIT;Combien de jours avant l'application actuelle Le client a-t-il postulé pour le crédit du Credit Bureau
-130;bureau.csv;CREDIT_DAY_OVERDUE;Nombre de jours passés sur le crédit CB au moment de la demande de prêt connexe dans notre échantillon
-131;bureau.csv;DAYS_CREDIT_ENDDATE;Durée restante du crédit CB (en jours) au moment de la demande de crédit à domicile
-132;bureau.csv;DAYS_ENDDATE_FACT;Jours depuis que le crédit CB s'est terminé au moment de la demande de crédit à domicile (uniquement pour un crédit fermé)
-133;bureau.csv;AMT_CREDIT_MAX_OVERDUE;Montant maximal en souffrance sur le crédit du Bureau du crédit jusqu'à présent (à la date de demande de prêt dans notre échantillon)
-134;bureau.csv;CNT_CREDIT_PROLONG;Combien de fois le crédit du Bureau du crédit a-t-il prolongé
-135;bureau.csv;AMT_CREDIT_SUM;Montant de crédit actuel pour le crédit du Bureau du crédit
-136;bureau.csv;AMT_CREDIT_SUM_DEBT;Dette actuelle sur le crédit du bureau de crédit
-137;bureau.csv;AMT_CREDIT_SUM_LIMIT;Limite de crédit actuelle de la carte de crédit déclarée dans le Credit Bureau
-138;bureau.csv;AMT_CREDIT_SUM_OVERDUE;Montant actuel en souffrance sur le crédit du bureau de crédit
-139;bureau.csv;CREDIT_TYPE;Type de crédit de bureau de crédit (voiture, espèces, ...)
-140;bureau.csv;DAYS_CREDIT_UPDATE;Combien de jours avant la demande de prêt a fait les dernières informations sur le crédit du Bureau du crédit
-141;bureau.csv;AMT_ANNUITY;Rente du crédit du Bureau du crédit
-142;bureau_balance.csv;SK_BUREAU_ID;ID recodé du crédit du Credit Bureau (codage unique pour chaque demande) - Utilisez-le pour vous joindre à la table Credit_Bueau
-143;bureau_balance.csv;MONTHS_BALANCE;Mois de solde par rapport à la date de demande (-1 signifie la date du solde le plus frais)
-144;bureau_balance.csv;STATUS;Statut of Credit Bureau Loan pendant le mois (actif, fermé, DPD0-30, Ö [c signifie fermé, x signifie statut inconnu, 0 signifie pas de DPD, 1 signifie maximal pendant le mois entre 1-30, 2 signifie DPD 31-60 , Ö 5 signifie DPD 120+ ou vendu ou radié])
-145;POS_CASH_balance.csv;SK_ID_PREV;ID du crédit précédent dans le crédit à domicile lié au prêt dans notre échantillon. (Un prêt dans notre échantillon peut avoir 0,1,2 ou plus de prêts précédents en crédit à domicile)
-146;POS_CASH_balance.csv;SK_ID_CURR;ID de prêt dans notre échantillon
-147;POS_CASH_balance.csv;MONTHS_BALANCE;Mois de solde par rapport à la date de demande (-1 signifie les informations sur l'instantané mensuel le plus frais, 0 signifie les informations sur l'application - souvent ce sera la même chose que -1 car de nombreuses banques ne mettent pas à jour régulièrement les informations sur le bureau de crédit)
-148;POS_CASH_balance.csv;CNT_INSTALMENT;Terme du crédit précédent (peut changer avec le temps)
-149;POS_CASH_balance.csv;CNT_INSTALMENT_FUTURE;Versements laissés à payer sur le crédit précédent
-150;POS_CASH_balance.csv;NAME_CONTRACT_STATUS;Statut du contrat pendant le mois
-151;POS_CASH_balance.csv;SK_DPD;DPD (jours passés) pendant le mois de crédit précédent
-152;POS_CASH_balance.csv;SK_DPD_DEF;DPD pendant le mois avec tolérance (les dettes avec les faibles montants de prêt sont ignorées) du crédit précédent
-153;credit_card_balance.csv;SK_ID_PREV;ID du crédit précédent dans le crédit à domicile lié au prêt dans notre échantillon. (Un prêt dans notre échantillon peut avoir 0,1,2 ou plus de prêts précédents en crédit à domicile)
-154;credit_card_balance.csv;SK_ID_CURR;ID de prêt dans notre échantillon
-155;credit_card_balance.csv;MONTHS_BALANCE;Mois de solde par rapport à la date de demande (-1 signifie la date du solde le plus frais)
-156;credit_card_balance.csv;AMT_BALANCE;Solde pendant le mois de crédit précédent
-157;credit_card_balance.csv;AMT_CREDIT_LIMIT_ACTUAL;Limite de la carte de crédit pendant le mois du crédit précédent
-158;credit_card_balance.csv;AMT_DRAWINGS_ATM_CURRENT;Montant de dessin au guichet automatique pendant le mois du crédit précédent
-159;credit_card_balance.csv;AMT_DRAWINGS_CURRENT;Dessin de montant pendant le mois du crédit précédent
-160;credit_card_balance.csv;AMT_DRAWINGS_OTHER_CURRENT;Montant des autres dessins au cours du mois du crédit précédent
-161;credit_card_balance.csv;AMT_DRAWINGS_POS_CURRENT;Montant de dessin ou d'achat de marchandises pendant le mois du crédit précédent
-162;credit_card_balance.csv;AMT_INST_MIN_REGULARITY;Versement minimal pour ce mois du crédit précédent
-163;credit_card_balance.csv;AMT_PAYMENT_CURRENT;Combien le client a-t-il payé pendant le mois sur le crédit précédent
-164;credit_card_balance.csv;AMT_PAYMENT_TOTAL_CURRENT;Combien le client a-t-il payé au cours du mois au total sur le crédit précédent
-165;credit_card_balance.csv;AMT_RECEIVABLE_PRINCIPAL;Montant des débiteurs pour le capital sur le crédit précédent
-166;credit_card_balance.csv;AMT_RECIVABLE;Montant des débiteurs sur le crédit précédent
-167;credit_card_balance.csv;AMT_TOTAL_RECEIVABLE;Montant total à recevoir sur le crédit précédent
-168;credit_card_balance.csv;CNT_DRAWINGS_ATM_CURRENT;Nombre de dessins à ATM au cours de ce mois sur le crédit précédent
-169;credit_card_balance.csv;CNT_DRAWINGS_CURRENT;Nombre de dessins au cours de ce mois sur le crédit précédent
-170;credit_card_balance.csv;CNT_DRAWINGS_OTHER_CURRENT;Nombre d'autres dessins au cours de ce mois sur le crédit précédent
-171;credit_card_balance.csv;CNT_DRAWINGS_POS_CURRENT;Nombre de dessins pour les marchandises au cours de ce mois sur le crédit précédent
-172;credit_card_balance.csv;CNT_INSTALMENT_MATURE_CUM;Nombre de versements payants sur le crédit précédent
-173;credit_card_balance.csv;NAME_CONTRACT_STATUS;État du contrat (signé actif, ...) sur le crédit précédent
-174;credit_card_balance.csv;SK_DPD;DPD (jours passés) pendant le mois sur le crédit précédent
-175;credit_card_balance.csv;SK_DPD_DEF;DPD (jours passés) au cours du mois avec tolérance (les dettes avec des montants de prêt faibles sont ignorés) du crédit précédent
-176;previous_application.csv;SK_ID_PREV;ID du crédit précédent dans le crédit à domicile lié au prêt dans notre échantillon. (Un prêt dans notre échantillon peut avoir 0,1,2 ou plus de demandes de prêt précédentes dans le crédit à domicile, la demande précédente pourrait, mais pas nécessairement à conduire au crédit)
-177;previous_application.csv;SK_ID_CURR;ID de prêt dans notre échantillon
-178;previous_application.csv;NAME_CONTRACT_TYPE;Type de produit de contrat (prêt en espèces, prêt à la consommation [pos], ...) de la demande précédente
-179;previous_application.csv;AMT_ANNUITY;Rente de l'application précédente
-180;previous_application.csv;AMT_APPLICATION;Pour combien de crédit le client a demandé sur la demande précédente
-181;previous_application.csv;AMT_CREDIT;Montant de crédit final sur la demande précédente. Cela diffère d'AMT_Application d'une manière que l'AMT_APPLICATION est le montant pour lequel le client a initialement demandé, mais pendant notre processus d'approbation, il aurait pu recevoir un montant différent - AMT_CREDIT
-182;previous_application.csv;AMT_DOWN_PAYMENT;Acompte sur la demande précédente
-183;previous_application.csv;AMT_GOODS_PRICE;Prix ​​des marchandises du bien que le client a demandé (le cas échéant) sur la demande précédente
-184;previous_application.csv;WEEKDAY_APPR_PROCESS_START;Quel jour de la semaine le client a-t-il postulé pour une demande précédente
-185;previous_application.csv;HOUR_APPR_PROCESS_START;Environ l'heure du jour, le client a-t-il postulé pour la demande précédente
-186;previous_application.csv;FLAG_LAST_APPL_PER_CONTRACT;Indicateur Si c'était la dernière demande de contrat précédent. Parfois, par erreur de client ou de notre commis, il pourrait y avoir plus de demandes pour un seul contrat
-187;previous_application.csv;NFLAG_LAST_APPL_IN_DAY;Flag Si la demande était la dernière application par jour du client. Parfois, les clients demandent plus de demandes par jour. Il pourrait rarement être une erreur dans notre système qu'une seule application se trouve dans la base de données deux fois
-188;previous_application.csv;NFLAG_MICRO_CASH;Indicateur Prêt de Micro Finance
-189;previous_application.csv;RATE_DOWN_PAYMENT;Taux de paiement normalisé sur le crédit précédent
-190;previous_application.csv;RATE_INTEREST_PRIMARY;Taux d'intérêt normalisé sur le crédit précédent
-191;previous_application.csv;RATE_INTEREST_PRIVILEGED;Taux d'intérêt normalisé sur le crédit précédent
-192;previous_application.csv;NAME_CASH_LOAN_PURPOSE;Objectif du prêt en espèces
-193;previous_application.csv;NAME_CONTRACT_STATUS;État du contrat (approuvé, annulé, ...) de la demande précédente
-194;previous_application.csv;DAYS_DECISION;Par rapport à l'application actuelle quand la décision concernant la demande précédente a été prise
-195;previous_application.csv;NAME_PAYMENT_TYPE;Méthode de paiement que le client a choisi de payer pour la demande précédente
-196;previous_application.csv;CODE_REJECT_REASON;Pourquoi la demande précédente a-t-elle été rejetée
-197;previous_application.csv;NAME_TYPE_SUITE;Qui a accompagné le client lors de la demande de la demande précédente
-198;previous_application.csv;NAME_CLIENT_TYPE;Le client était-il ancien ou nouveau client lors de la possibilité de postuler pour l'application précédente
-199;previous_application.csv;NAME_GOODS_CATEGORY;Quel type de marchandises le client a-t-il postulé dans la demande précédente
-200;previous_application.csv;NAME_PORTFOLIO;Était la demande précédente en espèces, pos, voiture, Ö
-201;previous_application.csv;NAME_PRODUCT_TYPE;Était l'application précédente X-Sell o Walk-in
-202;previous_application.csv;CHANNEL_TYPE;À travers quel canal nous avons acquis le client sur l'application précédente
-203;previous_application.csv;SELLERPLACE_AREA;Zone de vente de la place du vendeur de la demande précédente
-204;previous_application.csv;NAME_SELLER_INDUSTRY;L'industrie du vendeur
-205;previous_application.csv;CNT_PAYMENT;Terme du crédit précédent à l'application de la demande précédente
-206;previous_application.csv;NAME_YIELD_GROUP;Taux d'intérêt groupé en petit moyen et élevé de l'application précédente
-207;previous_application.csv;PRODUCT_COMBINATION;Combinaison de produits détaillée de l'application précédente
-208;previous_application.csv;DAYS_FIRST_DRAWING;Par rapport à la date de demande de l'application actuelle quand a été le premier décaissement de l'application précédente
-209;previous_application.csv;DAYS_FIRST_DUE;Par rapport à la date de demande de l'application actuelle quand la première est censée être de l'application précédente
-210;previous_application.csv;DAYS_LAST_DUE_1ST_VERSION;Par rapport à la date d'application de l'application actuelle en ce qui concerne le premier à cause de l'application précédente
-211;previous_application.csv;DAYS_LAST_DUE;Par rapport à la date de demande de l'application actuelle quand était la dernière date d'échéance de la demande précédente
-212;previous_application.csv;DAYS_TERMINATION;Par rapport à la date de demande de l'application actuelle en ce qui concerne la résiliation prévue de la demande précédente
-213;previous_application.csv;NFLAG_INSURED_ON_APPROVAL;Le client a-t-il demandé une assurance lors de la demande précédente
-214;installments_payments.csv;SK_ID_PREV;ID du crédit précédent dans le crédit à domicile lié au prêt dans notre échantillon. (Un prêt dans notre échantillon peut avoir 0,1,2 ou plus de prêts précédents en crédit à domicile)
-215;installments_payments.csv;SK_ID_CURR;ID de prêt dans notre échantillon
-216;installments_payments.csv;NUM_INSTALMENT_VERSION;Version du calendrier des versions (0 est pour la carte de crédit) du crédit précédent. Le changement de version de versement d'un mois à l'autre signifie qu'un certain paramètre de calendrier de paiement a changé
-217;installments_payments.csv;NUM_INSTALMENT_NUMBER;Sur quel versement nous observons le paiement
-218;installments_payments.csv;DAYS_INSTALMENT;Lorsque le versement du crédit précédent était censé être payé (par rapport à la date de demande du prêt actuel)
-219;installments_payments.csv;DAYS_ENTRY_PAYMENT;À quand remonte les versements du crédit précédent payé (par rapport à la date de demande du prêt actuel)
-220;installments_payments.csv;AMT_INSTALMENT;Quel était le montant du versement prescrit du crédit précédent sur cet épisode
-221;installments_payments.csv;AMT_PAYMENT;Ce que le client a réellement payé sur le crédit précédent sur cet épisode
+,Table,Row,Description
+1,application_{train|test}.csv,SK_ID_CURR,ID de prêt dans notre échantillon
+2,application_{train|test}.csv,TARGET,Variable cible (1 - Client avec difficultés de paiement: il a eu un paiement en retard plus de x jours sur au moins l'un des premiers versements du prêt dans notre échantillon, 0 - tous les autres cas)
+5,application_{train|test}.csv,NAME_CONTRACT_TYPE,Identification si le prêt est en espèces ou renouvelable
+6,application_{train|test}.csv,CODE_GENDER,Sexe du client
+7,application_{train|test}.csv,FLAG_OWN_CAR,Indicateur si le client possède une voiture
+8,application_{train|test}.csv,FLAG_OWN_REALTY,Indicateur si le client est propriétaire d'une maison ou d'un appartement
+9,application_{train|test}.csv,CNT_CHILDREN,Nombre d'enfants du client
+10,application_{train|test}.csv,AMT_INCOME_TOTAL,Revenu du client
+11,application_{train|test}.csv,AMT_CREDIT,Montant de crédit du prêt
+12,application_{train|test}.csv,AMT_ANNUITY,Annuité de prêt
+13,application_{train|test}.csv,AMT_GOODS_PRICE,Pour les prêts à la consommation, c'est le prix des biens pour lesquelles le prêt est accordé
+14,application_{train|test}.csv,NAME_TYPE_SUITE,Qui accompagnait le client lorsqu'il demandait le prêt
+15,application_{train|test}.csv,NAME_INCOME_TYPE,Type de revenu des clients (homme d'affaires, travail, congé de maternité, Ö)
+16,application_{train|test}.csv,NAME_EDUCATION_TYPE,Niveau de l'éducation la plus élevée que le client a atteint
+17,application_{train|test}.csv,NAME_FAMILY_STATUS,Statut familial du client
+18,application_{train|test}.csv,NAME_HOUSING_TYPE,Quelle est la situation du logement du client (louer, vivre avec les parents, ...)
+19,application_{train|test}.csv,REGION_POPULATION_RELATIVE,Population normalisée de la région où vit le client (un nombre plus élevé signifie que le client vit dans une région plus peuplée)
+20,application_{train|test}.csv,DAYS_BIRTH,L'âge du client dans les jours au moment de la demande
+21,application_{train|test}.csv,DAYS_EMPLOYED,Combien de jours avant la demande, la personne a commencé l'emploi actuel
+22,application_{train|test}.csv,DAYS_REGISTRATION,Combien de jours avant la demande le client a-t-il modifié son inscription
+23,application_{train|test}.csv,DAYS_ID_PUBLISH,Combien de jours avant la demande le client a-t-il modifié le document d'identité avec lequel il a postulé pour le prêt
+24,application_{train|test}.csv,OWN_CAR_AGE,Âge de la voiture du client
+25,application_{train|test}.csv,FLAG_MOBIL,Le client a-t-il fourni un téléphone mobile (1 = oui, 0 = non)
+26,application_{train|test}.csv,FLAG_EMP_PHONE,Le client a-t-il fourni un téléphone de travail (1 = oui, 0 = non)
+27,application_{train|test}.csv,FLAG_WORK_PHONE,Le client a-t-il fourni un téléphone à domicile (1 = oui, 0 = non)
+28,application_{train|test}.csv,FLAG_CONT_MOBILE,Le téléphone mobile était-il accessible (1 = oui, 0 = non)
+29,application_{train|test}.csv,FLAG_PHONE,Le client a-t-il fourni un téléphone à domicile (1 = oui, 0 = non)
+30,application_{train|test}.csv,FLAG_EMAIL,Le client a-t-il fourni un e-mail (1 = oui, 0 = non)
+31,application_{train|test}.csv,OCCUPATION_TYPE,Quel type d'occupation le client a-t-il
+32,application_{train|test}.csv,CNT_FAM_MEMBERS,Combien de membres de la famille a-t-il le client
+33,application_{train|test}.csv,REGION_RATING_CLIENT,Notre note de la région où vit le client (1,2,3)
+34,application_{train|test}.csv,REGION_RATING_CLIENT_W_CITY,Notre note de la région où le client vit avec la prise en compte de la ville (1,2,3)
+35,application_{train|test}.csv,WEEKDAY_APPR_PROCESS_START,Quel jour de la semaine le client a-t-il demandé le prêt
+36,application_{train|test}.csv,HOUR_APPR_PROCESS_START,Environ à quelle heure le client a-t-il demandé le prêt
+37,application_{train|test}.csv,REG_REGION_NOT_LIVE_REGION,Indicateur Si l'adresse permanente du client ne correspond pas à l'adresse de contact (1 = différente, 0 = même, au niveau de la région)
+38,application_{train|test}.csv,REG_REGION_NOT_WORK_REGION,Indicateur si l'adresse permanente du client ne correspond pas à l'adresse du lieu de travail (1=différente, 0=même, au niveau de la région)
+39,application_{train|test}.csv,LIVE_REGION_NOT_WORK_REGION,Indicateur Si l'adresse de contact du client ne correspond pas à l'adresse de travail (1 = différente, 0 = même, au niveau de la région)
+40,application_{train|test}.csv,REG_CITY_NOT_LIVE_CITY,Indicateur Si l'adresse permanente du client ne correspond pas à l'adresse de contact (1 = différent, 0 = même, au niveau de la ville)
+41,application_{train|test}.csv,REG_CITY_NOT_WORK_CITY,Indicateur Si l'adresse permanente du client ne correspond pas à l'adresse de travail (1 = différente, 0 = même, au niveau de la ville)
+42,application_{train|test}.csv,LIVE_CITY_NOT_WORK_CITY,Indicateur Si l'adresse de contact du client ne correspond pas à l'adresse de travail (1 = différente, 0 = même, au niveau de la ville)
+43,application_{train|test}.csv,ORGANIZATION_TYPE,Type d'organisation où le client travaille
+44,application_{train|test}.csv,EXT_SOURCE_1,Score normalisé de la source de données externe
+45,application_{train|test}.csv,EXT_SOURCE_2,Score normalisé de la source de données externe
+46,application_{train|test}.csv,EXT_SOURCE_3,Score normalisé de la source de données externe
+47,application_{train|test}.csv,APARTMENTS_AVG,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+48,application_{train|test}.csv,BASEMENTAREA_AVG,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+49,application_{train|test}.csv,YEARS_BEGINEXPLUATATION_AVG,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+50,application_{train|test}.csv,YEARS_BUILD_AVG,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+51,application_{train|test}.csv,COMMONAREA_AVG,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+52,application_{train|test}.csv,ELEVATORS_AVG,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+53,application_{train|test}.csv,ENTRANCES_AVG,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+54,application_{train|test}.csv,FLOORSMAX_AVG,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+55,application_{train|test}.csv,FLOORSMIN_AVG,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+56,application_{train|test}.csv,LANDAREA_AVG,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+57,application_{train|test}.csv,LIVINGAPARTMENTS_AVG,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+58,application_{train|test}.csv,LIVINGAREA_AVG,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+59,application_{train|test}.csv,NONLIVINGAPARTMENTS_AVG,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+60,application_{train|test}.csv,NONLIVINGAREA_AVG,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+61,application_{train|test}.csv,APARTMENTS_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+62,application_{train|test}.csv,BASEMENTAREA_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+63,application_{train|test}.csv,YEARS_BEGINEXPLUATATION_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+64,application_{train|test}.csv,YEARS_BUILD_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+65,application_{train|test}.csv,COMMONAREA_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+66,application_{train|test}.csv,ELEVATORS_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+67,application_{train|test}.csv,ENTRANCES_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+68,application_{train|test}.csv,FLOORSMAX_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+69,application_{train|test}.csv,FLOORSMIN_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+70,application_{train|test}.csv,LANDAREA_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+71,application_{train|test}.csv,LIVINGAPARTMENTS_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+72,application_{train|test}.csv,LIVINGAREA_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+73,application_{train|test}.csv,NONLIVINGAPARTMENTS_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+74,application_{train|test}.csv,NONLIVINGAREA_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+75,application_{train|test}.csv,APARTMENTS_MEDI,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+76,application_{train|test}.csv,BASEMENTAREA_MEDI,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+77,application_{train|test}.csv,YEARS_BEGINEXPLUATATION_MEDI,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+78,application_{train|test}.csv,YEARS_BUILD_MEDI,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+79,application_{train|test}.csv,COMMONAREA_MEDI,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+80,application_{train|test}.csv,ELEVATORS_MEDI,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+81,application_{train|test}.csv,ENTRANCES_MEDI,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+82,application_{train|test}.csv,FLOORSMAX_MEDI,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+83,application_{train|test}.csv,FLOORSMIN_MEDI,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+84,application_{train|test}.csv,LANDAREA_MEDI,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+85,application_{train|test}.csv,LIVINGAPARTMENTS_MEDI,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+86,application_{train|test}.csv,LIVINGAREA_MEDI,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+87,application_{train|test}.csv,NONLIVINGAPARTMENTS_MEDI,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+88,application_{train|test}.csv,NONLIVINGAREA_MEDI,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+89,application_{train|test}.csv,FONDKAPREMONT_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+90,application_{train|test}.csv,HOUSETYPE_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+91,application_{train|test}.csv,TOTALAREA_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+92,application_{train|test}.csv,WALLSMATERIAL_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+93,application_{train|test}.csv,EMERGENCYSTATE_MODE,Informations normalisées sur la construction où le client vit, ce qui est moyen (suffixe _avg), modus (suffixe _mode), taille de l'appartement médian (suffixe _medi), espace commun, espace de vie, âge de construction, nombre d'ascenseurs, nombre d'entrées, état d'état du bâtiment, nombre de plancher
+94,application_{train|test}.csv,OBS_30_CNT_SOCIAL_CIRCLE,Combien d'observation de l'environnement social du client avec un DPD observable (jours après)
+95,application_{train|test}.csv,DEF_30_CNT_SOCIAL_CIRCLE,Combien d'observation de l'environnement social du client a fait défaut sur 30 DPD (jours après)
+96,application_{train|test}.csv,OBS_60_CNT_SOCIAL_CIRCLE,Combien d'observation de l'environnement social du client avec un DPD observable (jours passés) par défaut
+97,application_{train|test}.csv,DEF_60_CNT_SOCIAL_CIRCLE,Combien d'observation de l'environnement social du client a fait défaut sur 60 (jours passés dû) DPD
+98,application_{train|test}.csv,DAYS_LAST_PHONE_CHANGE,Combien de jours avant l'application le client a-t-il changé de téléphone
+99,application_{train|test}.csv,FLAG_DOCUMENT_2,Le client a-t-il fourni le document 2
+100,application_{train|test}.csv,FLAG_DOCUMENT_3,Le client a-t-il fourni un document 3
+101,application_{train|test}.csv,FLAG_DOCUMENT_4,Le client a-t-il fourni un document 4
+102,application_{train|test}.csv,FLAG_DOCUMENT_5,Le client a-t-il fourni le document 5
+103,application_{train|test}.csv,FLAG_DOCUMENT_6,Le client a-t-il fourni un document 6
+104,application_{train|test}.csv,FLAG_DOCUMENT_7,Le client a-t-il fourni le document 7
+105,application_{train|test}.csv,FLAG_DOCUMENT_8,Le client a-t-il fourni un document 8
+106,application_{train|test}.csv,FLAG_DOCUMENT_9,Le client a-t-il fourni le document 9
+107,application_{train|test}.csv,FLAG_DOCUMENT_10,Le client a-t-il fourni le document 10
+108,application_{train|test}.csv,FLAG_DOCUMENT_11,Le client a-t-il fourni le document 11
+109,application_{train|test}.csv,FLAG_DOCUMENT_12,Le client a-t-il fourni un document 12
+110,application_{train|test}.csv,FLAG_DOCUMENT_13,Le client a-t-il fourni le document 13
+111,application_{train|test}.csv,FLAG_DOCUMENT_14,Le client a-t-il fourni le document 14
+112,application_{train|test}.csv,FLAG_DOCUMENT_15,Le client a-t-il fourni un document 15
+113,application_{train|test}.csv,FLAG_DOCUMENT_16,Le client a-t-il fourni un document 16
+114,application_{train|test}.csv,FLAG_DOCUMENT_17,Le client a-t-il fourni le document 17
+115,application_{train|test}.csv,FLAG_DOCUMENT_18,Le client a-t-il fourni un document 18
+116,application_{train|test}.csv,FLAG_DOCUMENT_19,Le client a-t-il fourni le document 19
+117,application_{train|test}.csv,FLAG_DOCUMENT_20,Le client a-t-il fourni un document 20
+118,application_{train|test}.csv,FLAG_DOCUMENT_21,Le client a-t-il fourni le document 21
+119,application_{train|test}.csv,AMT_REQ_CREDIT_BUREAU_HOUR,Nombre de demandes de renseignements sur le Bureau de créditer sur le client une heure avant la demande
+120,application_{train|test}.csv,AMT_REQ_CREDIT_BUREAU_DAY,Nombre de demandes de renseignements sur le Bureau du client un jour avant la demande (à l'exclusion d'une heure avant la demande)
+121,application_{train|test}.csv,AMT_REQ_CREDIT_BUREAU_WEEK,Nombre de demandes de renseignements sur le Bureau de crédibilité sur le client une semaine avant la demande (à l'exclusion un jour avant la demande)
+122,application_{train|test}.csv,AMT_REQ_CREDIT_BUREAU_MON,Nombre de demandes de renseignements au Bureau de crédits sur le client un mois avant la demande (à l'exclusion d'une semaine avant la demande)
+123,application_{train|test}.csv,AMT_REQ_CREDIT_BUREAU_QRT,Nombre de demandes de renseignements sur le Bureau de crédits sur le client 3 mois avant la demande (à l'exclusion d'un mois avant la demande)
+124,application_{train|test}.csv,AMT_REQ_CREDIT_BUREAU_YEAR,Nombre de demandes de renseignements sur le Bureau du Client un jour un jour (à l'exception des 3 derniers mois avant la demande)
+125,bureau.csv,SK_ID_CURR,ID de prêt dans notre échantillon - Un prêt dans notre échantillon peut avoir 0,1,2 ou plusieurs crédits antérieurs liés au Credit Bureau
+126,bureau.csv,SK_BUREAU_ID,ID recodé du crédit du Bureau de crédit précédent lié à notre prêt (codage unique pour chaque demande de prêt)
+127,bureau.csv,CREDIT_ACTIVE,Le statut du Bureau du crédit (CB) a déclaré des crédits
+128,bureau.csv,CREDIT_CURRENCY,RECODED CARRENCY DU CRÉDIT DU BUREAU DE CRÉDIT
+129,bureau.csv,DAYS_CREDIT,Combien de jours avant l'application actuelle Le client a-t-il postulé pour le crédit du Credit Bureau
+130,bureau.csv,CREDIT_DAY_OVERDUE,Nombre de jours passés sur le crédit CB au moment de la demande de prêt connexe dans notre échantillon
+131,bureau.csv,DAYS_CREDIT_ENDDATE,Durée restante du crédit CB (en jours) au moment de la demande de crédit à domicile
+132,bureau.csv,DAYS_ENDDATE_FACT,Jours depuis que le crédit CB s'est terminé au moment de la demande de crédit à domicile (uniquement pour un crédit fermé)
+133,bureau.csv,AMT_CREDIT_MAX_OVERDUE,Montant maximal en souffrance sur le crédit du Bureau du crédit jusqu'à présent (à la date de demande de prêt dans notre échantillon)
+134,bureau.csv,CNT_CREDIT_PROLONG,Combien de fois le crédit du Bureau du crédit a-t-il prolongé
+135,bureau.csv,AMT_CREDIT_SUM,Montant de crédit actuel pour le crédit du Bureau du crédit
+136,bureau.csv,AMT_CREDIT_SUM_DEBT,Dette actuelle sur le crédit du bureau de crédit
+137,bureau.csv,AMT_CREDIT_SUM_LIMIT,Limite de crédit actuelle de la carte de crédit déclarée dans le Credit Bureau
+138,bureau.csv,AMT_CREDIT_SUM_OVERDUE,Montant actuel en souffrance sur le crédit du bureau de crédit
+139,bureau.csv,CREDIT_TYPE,Type de crédit de bureau de crédit (voiture, espèces, ...)
+140,bureau.csv,DAYS_CREDIT_UPDATE,Combien de jours avant la demande de prêt a fait les dernières informations sur le crédit du Bureau du crédit
+141,bureau.csv,AMT_ANNUITY,Rente du crédit du Bureau du crédit
+142,bureau_balance.csv,SK_BUREAU_ID,ID recodé du crédit du Credit Bureau (codage unique pour chaque demande) - Utilisez-le pour vous joindre à la table Credit_Bueau
+143,bureau_balance.csv,MONTHS_BALANCE,Mois de solde par rapport à la date de demande (-1 signifie la date du solde le plus frais)
+144,bureau_balance.csv,STATUS,Statut of Credit Bureau Loan pendant le mois (actif, fermé, DPD0-30, Ö [c signifie fermé, x signifie statut inconnu, 0 signifie pas de DPD, 1 signifie maximal pendant le mois entre 1-30, 2 signifie DPD 31-60 , Ö 5 signifie DPD 120+ ou vendu ou radié])
+145,POS_CASH_balance.csv,SK_ID_PREV,ID du crédit précédent dans le crédit à domicile lié au prêt dans notre échantillon. (Un prêt dans notre échantillon peut avoir 0,1,2 ou plus de prêts précédents en crédit à domicile)
+146,POS_CASH_balance.csv,SK_ID_CURR,ID de prêt dans notre échantillon
+147,POS_CASH_balance.csv,MONTHS_BALANCE,Mois de solde par rapport à la date de demande (-1 signifie les informations sur l'instantané mensuel le plus frais, 0 signifie les informations sur l'application - souvent ce sera la même chose que -1 car de nombreuses banques ne mettent pas à jour régulièrement les informations sur le bureau de crédit)
+148,POS_CASH_balance.csv,CNT_INSTALMENT,Terme du crédit précédent (peut changer avec le temps)
+149,POS_CASH_balance.csv,CNT_INSTALMENT_FUTURE,Versements laissés à payer sur le crédit précédent
+150,POS_CASH_balance.csv,NAME_CONTRACT_STATUS,Statut du contrat pendant le mois
+151,POS_CASH_balance.csv,SK_DPD,DPD (jours passés) pendant le mois de crédit précédent
+152,POS_CASH_balance.csv,SK_DPD_DEF,DPD pendant le mois avec tolérance (les dettes avec les faibles montants de prêt sont ignorées) du crédit précédent
+153,credit_card_balance.csv,SK_ID_PREV,ID du crédit précédent dans le crédit à domicile lié au prêt dans notre échantillon. (Un prêt dans notre échantillon peut avoir 0,1,2 ou plus de prêts précédents en crédit à domicile)
+154,credit_card_balance.csv,SK_ID_CURR,ID de prêt dans notre échantillon
+155,credit_card_balance.csv,MONTHS_BALANCE,Mois de solde par rapport à la date de demande (-1 signifie la date du solde le plus frais)
+156,credit_card_balance.csv,AMT_BALANCE,Solde pendant le mois de crédit précédent
+157,credit_card_balance.csv,AMT_CREDIT_LIMIT_ACTUAL,Limite de la carte de crédit pendant le mois du crédit précédent
+158,credit_card_balance.csv,AMT_DRAWINGS_ATM_CURRENT,Montant de dessin au guichet automatique pendant le mois du crédit précédent
+159,credit_card_balance.csv,AMT_DRAWINGS_CURRENT,Dessin de montant pendant le mois du crédit précédent
+160,credit_card_balance.csv,AMT_DRAWINGS_OTHER_CURRENT,Montant des autres dessins au cours du mois du crédit précédent
+161,credit_card_balance.csv,AMT_DRAWINGS_POS_CURRENT,Montant de dessin ou d'achat de marchandises pendant le mois du crédit précédent
+162,credit_card_balance.csv,AMT_INST_MIN_REGULARITY,Versement minimal pour ce mois du crédit précédent
+163,credit_card_balance.csv,AMT_PAYMENT_CURRENT,Combien le client a-t-il payé pendant le mois sur le crédit précédent
+164,credit_card_balance.csv,AMT_PAYMENT_TOTAL_CURRENT,Combien le client a-t-il payé au cours du mois au total sur le crédit précédent
+165,credit_card_balance.csv,AMT_RECEIVABLE_PRINCIPAL,Montant des débiteurs pour le capital sur le crédit précédent
+166,credit_card_balance.csv,AMT_RECIVABLE,Montant des débiteurs sur le crédit précédent
+167,credit_card_balance.csv,AMT_TOTAL_RECEIVABLE,Montant total à recevoir sur le crédit précédent
+168,credit_card_balance.csv,CNT_DRAWINGS_ATM_CURRENT,Nombre de dessins à ATM au cours de ce mois sur le crédit précédent
+169,credit_card_balance.csv,CNT_DRAWINGS_CURRENT,Nombre de dessins au cours de ce mois sur le crédit précédent
+170,credit_card_balance.csv,CNT_DRAWINGS_OTHER_CURRENT,Nombre d'autres dessins au cours de ce mois sur le crédit précédent
+171,credit_card_balance.csv,CNT_DRAWINGS_POS_CURRENT,Nombre de dessins pour les marchandises au cours de ce mois sur le crédit précédent
+172,credit_card_balance.csv,CNT_INSTALMENT_MATURE_CUM,Nombre de versements payants sur le crédit précédent
+173,credit_card_balance.csv,NAME_CONTRACT_STATUS,État du contrat (signé actif, ...) sur le crédit précédent
+174,credit_card_balance.csv,SK_DPD,DPD (jours passés) pendant le mois sur le crédit précédent
+175,credit_card_balance.csv,SK_DPD_DEF,DPD (jours passés) au cours du mois avec tolérance (les dettes avec des montants de prêt faibles sont ignorés) du crédit précédent
+176,previous_application.csv,SK_ID_PREV,ID du crédit précédent dans le crédit à domicile lié au prêt dans notre échantillon. (Un prêt dans notre échantillon peut avoir 0,1,2 ou plus de demandes de prêt précédentes dans le crédit à domicile, la demande précédente pourrait, mais pas nécessairement à conduire au crédit)
+177,previous_application.csv,SK_ID_CURR,ID de prêt dans notre échantillon
+178,previous_application.csv,NAME_CONTRACT_TYPE,Type de produit de contrat (prêt en espèces, prêt à la consommation [pos], ...) de la demande précédente
+179,previous_application.csv,AMT_ANNUITY,Rente de l'application précédente
+180,previous_application.csv,AMT_APPLICATION,Pour combien de crédit le client a demandé sur la demande précédente
+181,previous_application.csv,AMT_CREDIT,Montant de crédit final sur la demande précédente. Cela diffère d'AMT_Application d'une manière que l'AMT_APPLICATION est le montant pour lequel le client a initialement demandé, mais pendant notre processus d'approbation, il aurait pu recevoir un montant différent - AMT_CREDIT
+182,previous_application.csv,AMT_DOWN_PAYMENT,Acompte sur la demande précédente
+183,previous_application.csv,AMT_GOODS_PRICE,Prix __des marchandises du bien que le client a demandé (le cas échéant) sur la demande précédente
+184,previous_application.csv,WEEKDAY_APPR_PROCESS_START,Quel jour de la semaine le client a-t-il postulé pour une demande précédente
+185,previous_application.csv,HOUR_APPR_PROCESS_START,Environ l'heure du jour, le client a-t-il postulé pour la demande précédente
+186,previous_application.csv,FLAG_LAST_APPL_PER_CONTRACT,Indicateur Si c'était la dernière demande de contrat précédent. Parfois, par erreur de client ou de notre commis, il pourrait y avoir plus de demandes pour un seul contrat
+187,previous_application.csv,NFLAG_LAST_APPL_IN_DAY,Flag Si la demande était la dernière application par jour du client. Parfois, les clients demandent plus de demandes par jour. Il pourrait rarement être une erreur dans notre système qu'une seule application se trouve dans la base de données deux fois
+188,previous_application.csv,NFLAG_MICRO_CASH,Indicateur Prêt de Micro Finance
+189,previous_application.csv,RATE_DOWN_PAYMENT,Taux de paiement normalisé sur le crédit précédent
+190,previous_application.csv,RATE_INTEREST_PRIMARY,Taux d'intérêt normalisé sur le crédit précédent
+191,previous_application.csv,RATE_INTEREST_PRIVILEGED,Taux d'intérêt normalisé sur le crédit précédent
+192,previous_application.csv,NAME_CASH_LOAN_PURPOSE,Objectif du prêt en espèces
+193,previous_application.csv,NAME_CONTRACT_STATUS,État du contrat (approuvé, annulé, ...) de la demande précédente
+194,previous_application.csv,DAYS_DECISION,Par rapport à l'application actuelle quand la décision concernant la demande précédente a été prise
+195,previous_application.csv,NAME_PAYMENT_TYPE,Méthode de paiement que le client a choisi de payer pour la demande précédente
+196,previous_application.csv,CODE_REJECT_REASON,Pourquoi la demande précédente a-t-elle été rejetée
+197,previous_application.csv,NAME_TYPE_SUITE,Qui a accompagné le client lors de la demande de la demande précédente
+198,previous_application.csv,NAME_CLIENT_TYPE,Le client était-il ancien ou nouveau client lors de la possibilité de postuler pour l'application précédente
+199,previous_application.csv,NAME_GOODS_CATEGORY,Quel type de marchandises le client a-t-il postulé dans la demande précédente
+200,previous_application.csv,NAME_PORTFOLIO,Était la demande précédente en espèces, pos, voiture, Ö
+201,previous_application.csv,NAME_PRODUCT_TYPE,Était l'application précédente X-Sell o Walk-in
+202,previous_application.csv,CHANNEL_TYPE,À travers quel canal nous avons acquis le client sur l'application précédente
+203,previous_application.csv,SELLERPLACE_AREA,Zone de vente de la place du vendeur de la demande précédente
+204,previous_application.csv,NAME_SELLER_INDUSTRY,L'industrie du vendeur
+205,previous_application.csv,CNT_PAYMENT,Terme du crédit précédent à l'application de la demande précédente
+206,previous_application.csv,NAME_YIELD_GROUP,Taux d'intérêt groupé en petit moyen et élevé de l'application précédente
+207,previous_application.csv,PRODUCT_COMBINATION,Combinaison de produits détaillée de l'application précédente
+208,previous_application.csv,DAYS_FIRST_DRAWING,Par rapport à la date de demande de l'application actuelle quand a été le premier décaissement de l'application précédente
+209,previous_application.csv,DAYS_FIRST_DUE,Par rapport à la date de demande de l'application actuelle quand la première est censée être de l'application précédente
+210,previous_application.csv,DAYS_LAST_DUE_1ST_VERSION,Par rapport à la date d'application de l'application actuelle en ce qui concerne le premier à cause de l'application précédente
+211,previous_application.csv,DAYS_LAST_DUE,Par rapport à la date de demande de l'application actuelle quand était la dernière date d'échéance de la demande précédente
+212,previous_application.csv,DAYS_TERMINATION,Par rapport à la date de demande de l'application actuelle en ce qui concerne la résiliation prévue de la demande précédente
+213,previous_application.csv,NFLAG_INSURED_ON_APPROVAL,Le client a-t-il demandé une assurance lors de la demande précédente
+214,installments_payments.csv,SK_ID_PREV,ID du crédit précédent dans le crédit à domicile lié au prêt dans notre échantillon. (Un prêt dans notre échantillon peut avoir 0,1,2 ou plus de prêts précédents en crédit à domicile)
+215,installments_payments.csv,SK_ID_CURR,ID de prêt dans notre échantillon
+216,installments_payments.csv,NUM_INSTALMENT_VERSION,Version du calendrier des versions (0 est pour la carte de crédit) du crédit précédent. Le changement de version de versement d'un mois à l'autre signifie qu'un certain paramètre de calendrier de paiement a changé
+217,installments_payments.csv,NUM_INSTALMENT_NUMBER,Sur quel versement nous observons le paiement
+218,installments_payments.csv,DAYS_INSTALMENT,Lorsque le versement du crédit précédent était censé être payé (par rapport à la date de demande du prêt actuel)
+219,installments_payments.csv,DAYS_ENTRY_PAYMENT,À quand remonte les versements du crédit précédent payé (par rapport à la date de demande du prêt actuel)
+220,installments_payments.csv,AMT_INSTALMENT,Quel était le montant du versement prescrit du crédit précédent sur cet épisode
+221,installments_payments.csv,AMT_PAYMENT,Ce que le client a réellement payé sur le crédit précédent sur cet épisode
