@@ -1,2 +1,2 @@
-;Table;Row;Description
-1;application_{train|test}.csv;SK_ID_CURR;ID de prêt dans notre échantillon
+,Table,Row,Description
+1,application_{train|test}.csv,SK_ID_CURR,ID de prêt dans notre échantillon
