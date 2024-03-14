@@ -1,4 +1,4 @@
-0;Table;Row;"Description"
+;Table;Row;"Description"
 1;application_{train|test}.csv;SK_ID_CURR;"ID de prêt dans notre échantillon"
 2;application_{train|test}.csv;TARGET;"Variable cible (1 - Client avec difficultés de paiement: il a eu un paiement en retard plus de x jours sur au moins l'un des premiers versements du prêt dans notre échantillon, 0 - tous les autres cas)"
 5;application_{train|test}.csv;NAME_CONTRACT_TYPE;"Identification si le prêt est en espèces ou renouvelable"
