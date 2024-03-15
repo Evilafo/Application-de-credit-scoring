@@ -181,6 +181,9 @@ def main() :
     st.sidebar.pyplot(fig)
 
 
+    #Loading general info
+    nb_credits, rev_moy, credits_moy, targets = load_infos_gen(data)
+    
     data_sk = data.reset_index(drop=False)
         data_sk.DAYS_BIRTH = (data_sk['DAYS_BIRTH']/365).round(1)
         fig, ax = plt.subplots(figsize=(10, 5))
@@ -200,7 +203,11 @@ def main() :
                          title="Revenu Total", title_font=dict(size=18, family='Verdana'))
 
         st.plotly_chart(fig)
-         
+
+
+
+
+
 
     #######################################
     # PAGE D'ACCUEIL - CONTENU PRINCIPAL
