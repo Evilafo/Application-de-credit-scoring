@@ -9,7 +9,8 @@ import plotly.express as px
 from zipfile import ZipFile
 from sklearn.cluster import KMeans
 plt.style.use('fivethirtyeight')
-sns.set()
+#sns.set()
+sns.set_theme(style="darkgrid")
 #sns.set_style('darkgrid')
 
 st.set_page_config(page_title='Dashbord de Credit Scoring - Evilafo' ,layout="wide",page_icon='📊')
@@ -144,7 +145,7 @@ def main() :
     """
     html_temp3 = """
     <p class="css-selector2"></p>
-    <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit…</p>
+    <p style="font-size: 20px; font-weight: bold; text-align:center">Aide à la décision de crédit, Prédiction de défaut de paiement </p>
     
     """
     st.markdown(html_temp, unsafe_allow_html=True)
@@ -179,36 +180,10 @@ def main() :
     fig, ax = plt.subplots(figsize=(5,5))
     plt.pie(targets, explode=[0, 0.1], labels=['Solvable', 'Non solvable'], autopct='%1.1f%%', startangle=90)
     st.sidebar.pyplot(fig)
-
-
-    #Loading general info
-    nb_credits, rev_moy, credits_moy, targets = load_infos_gen(data)
     
-    data_sk = data.reset_index(drop=False)
-        data_sk.DAYS_BIRTH = (data_sk['DAYS_BIRTH']/365).round(1)
-        fig, ax = plt.subplots(figsize=(10, 5))
-        fig = px.scatter(data_sk, x='DAYS_BIRTH', y="AMT_INCOME_TOTAL", 
-                         size="AMT_INCOME_TOTAL", color='CODE_GENDER',
-                         hover_data=['NAME_FAMILY_STATUS', 'CNT_CHILDREN', 'NAME_CONTRACT_TYPE', 'SK_ID_CURR'])
-
-        fig.update_layout({'plot_bgcolor':'#f0f0f0'}, 
-                          title={'text':"Relation Âge / Revenu Total", 'x':0.5, 'xanchor': 'center'}, 
-                          title_font=dict(size=20, family='Verdana'), legend=dict(y=1.1, orientation='h'))
 
 
-        fig.update_traces(marker=dict(line=dict(width=0.5, color='#3a352a')), selector=dict(mode='markers'))
-        fig.update_xaxes(showline=True, linewidth=2, linecolor='#f0f0f0', gridcolor='#cbcbcb',
-                         title="Age", title_font=dict(size=18, family='Verdana'))
-        fig.update_yaxes(showline=True, linewidth=2, linecolor='#f0f0f0', gridcolor='#cbcbcb',
-                         title="Revenu Total", title_font=dict(size=18, family='Verdana'))
-
-        st.plotly_chart(fig)
-
-
-
-
-
-
+    
     #######################################
     # PAGE D'ACCUEIL - CONTENU PRINCIPAL
     #######################################
@@ -233,8 +208,10 @@ def main() :
         #Age distribution plot
         data_age = load_age_population(data)
         fig, ax = plt.subplots(figsize=(10, 5))
-        sns.histplot(data_age, edgecolor = 'k', color="goldenrod", bins=20)
-        ax.axvline(int(infos_client["DAYS_BIRTH"].values / 365), color="green", linestyle='--')
+        #sns.histplot(data_age, edgecolor = 'k', color="goldenrod", bins=20)
+        #ax.axvline(int(infos_client["DAYS_BIRTH"].values / 365), color="green", linestyle='--')
+        sns.histplot(data_age, edgecolor = 'k', color="blue", bins=20)
+        ax.axvline(int(infos_client["DAYS_BIRTH"].values / 365), color="red", linestyle='--')
         ax.set(title='Age du client', xlabel='Age(Années)', ylabel='')
         st.pyplot(fig)
     
@@ -246,7 +223,7 @@ def main() :
         #st.write("**Montant du bien pour crédit : **{:.0f}".format(infos_client["AMT_GOODS_PRICE"].values[0]))
         st.write("**Montant du bien pour pour lequel le prêt est accordé : **{:.0f}".format(infos_client["AMT_GOODS_PRICE"].values[0])) 
         
-        #Income distribution plot
+        #Diagramme de répartition des revenus
         data_income = load_income_population(data)
         fig, ax = plt.subplots(figsize=(10, 5))
         sns.histplot(data_income["AMT_INCOME_TOTAL"], edgecolor = 'k', color="goldenrod", bins=10)
@@ -254,7 +231,7 @@ def main() :
         ax.set(title='Revenu du client', xlabel='Revenu (USD)', ylabel='')
         st.pyplot(fig)
         
-        #Relationship Age / Income Total interactive plot 
+        #Relation Âge / Revenu Total graphique interactif
         data_sk = data.reset_index(drop=False)
         data_sk.DAYS_BIRTH = (data_sk['DAYS_BIRTH']/365).round(1)
         fig, ax = plt.subplots(figsize=(10, 5))
