@@ -179,12 +179,33 @@ def main() :
     fig, ax = plt.subplots(figsize=(5,5))
     plt.pie(targets, explode=[0, 0.1], labels=['Solvable', 'Non solvable'], autopct='%1.1f%%', startangle=90)
     st.sidebar.pyplot(fig)
+
+
+    data_sk = data.reset_index(drop=False)
+        data_sk.DAYS_BIRTH = (data_sk['DAYS_BIRTH']/365).round(1)
+        fig, ax = plt.subplots(figsize=(10, 5))
+        fig = px.scatter(data_sk, x='DAYS_BIRTH', y="AMT_INCOME_TOTAL", 
+                         size="AMT_INCOME_TOTAL", color='CODE_GENDER',
+                         hover_data=['NAME_FAMILY_STATUS', 'CNT_CHILDREN', 'NAME_CONTRACT_TYPE', 'SK_ID_CURR'])
+
+        fig.update_layout({'plot_bgcolor':'#f0f0f0'}, 
+                          title={'text':"Relation Âge / Revenu Total", 'x':0.5, 'xanchor': 'center'}, 
+                          title_font=dict(size=20, family='Verdana'), legend=dict(y=1.1, orientation='h'))
+
+
+        fig.update_traces(marker=dict(line=dict(width=0.5, color='#3a352a')), selector=dict(mode='markers'))
+        fig.update_xaxes(showline=True, linewidth=2, linecolor='#f0f0f0', gridcolor='#cbcbcb',
+                         title="Age", title_font=dict(size=18, family='Verdana'))
+        fig.update_yaxes(showline=True, linewidth=2, linecolor='#f0f0f0', gridcolor='#cbcbcb',
+                         title="Revenu Total", title_font=dict(size=18, family='Verdana'))
+
+        st.plotly_chart(fig)
          
 
     #######################################
-    # HOME PAGE - MAIN CONTENT
+    # PAGE D'ACCUEIL - CONTENU PRINCIPAL
     #######################################
-    #Display Customer ID from Sidebar
+    #ID du client Sidebar
     st.write("Sélection du numéro client :", chk_id)
 
 
@@ -250,7 +271,7 @@ def main() :
     else:
         st.markdown("<i>…</i>", unsafe_allow_html=True)
 
-    #Customer solvability display
+    #Affichage de la solvabilité du client
     st.header("**Analyse du dossier client**")
     prediction = load_prediction(sample, chk_id, clf)
     #Calcul probabilite
