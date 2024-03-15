@@ -210,7 +210,7 @@ def main() :
         fig, ax = plt.subplots(figsize=(10, 5))
         #sns.histplot(data_age, edgecolor = 'k', color="goldenrod", bins=20)
         #ax.axvline(int(infos_client["DAYS_BIRTH"].values / 365), color="green", linestyle='--')
-        sns.histplot(data_age, edgecolor = 'k', color="blue", bins=20)
+        sns.histplot(data_age, edgecolor = 'k', color="skyblue", bins=20)
         ax.axvline(int(infos_client["DAYS_BIRTH"].values / 365), color="red", linestyle='--')
         ax.set(title='Age du client', xlabel='Age(Années)', ylabel='')
         st.pyplot(fig)
