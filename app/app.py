@@ -35,7 +35,7 @@ def main() :
 
 
     def load_model():
-        '''loading the trained model'''
+        '''chargement du modèle entrainé'''
         pickle_in = open('model/LGBMClassifier.pkl', 'rb') 
         clf = pickle.load(pickle_in)
         return clf
@@ -191,7 +191,7 @@ def main() :
     st.write("Sélection du numéro client :", chk_id)
 
 
-    #Customer information display : Customer Gender, Age, Family status, Children, …
+    #Informations du client : Genre, Age, Statut familial, Enfants...
     st.header("**Informations du client**")
 
     if st.checkbox("Afficher les informations du client ?"):
