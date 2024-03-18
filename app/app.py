@@ -164,16 +164,16 @@ def main() :
 
     ### Display of information in the sidebar ###
     #Number of loans in the sample
-    st.sidebar.markdown("<u>Nombre de prêts dans l'échantillon :</u>", unsafe_allow_html=True)
-    st.sidebar.text(nb_credits)
+    #st.sidebar.markdown("<u>Nombre de prêts dans l'échantillon :</u>", unsafe_allow_html=True)
+    #st.sidebar.text(nb_credits)
 
     #Average income
-    st.sidebar.markdown("<u>Revenu moyen (USD) :</u>", unsafe_allow_html=True)
-    st.sidebar.text(rev_moy)
+    #st.sidebar.markdown("<u>Revenu moyen (USD) :</u>", unsafe_allow_html=True)
+    #st.sidebar.text(rev_moy)
 
     #AMT CREDIT
-    st.sidebar.markdown("<u>Montant moyen du prêt (USD) :</u>", unsafe_allow_html=True)
-    st.sidebar.text(credits_moy)
+    #st.sidebar.markdown("<u>Montant moyen du prêt (USD) :</u>", unsafe_allow_html=True)
+    #st.sidebar.text(credits_moy)
     
     #PieChart
     #st.sidebar.markdown("<u>......</u>", unsafe_allow_html=True)
