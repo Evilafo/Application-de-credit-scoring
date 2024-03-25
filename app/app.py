@@ -324,7 +324,8 @@ def main() :
     idcli2 = idcli.copy()
     idcli2.drop('TARGET', axis=1, inplace=True)
     idcli2.insert(0, 'TARGET', idcli['TARGET'])
-    st.write(idcli2)
+    #st.write(idcli2)
+    st.table(idcli2)
 
     
     #Feature importance / description // supprimé
