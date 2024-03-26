@@ -187,9 +187,9 @@ def main() :
     #plt.show()
     #st.sidebar.pyplot(fig)
 
-    fig, ax = plt.subplots()
-    ax.barh(targets)
-    st.pyplot(fig)
+    #fig, ax = plt.subplots()
+    #ax.barh(targets)
+    #st.sidebar.pyplot(fig)
     
 
 
