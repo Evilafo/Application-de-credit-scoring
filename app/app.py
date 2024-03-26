@@ -180,19 +180,6 @@ def main() :
     fig, ax = plt.subplots(figsize=(5,5))
     plt.pie(targets, explode=[0, 0.1], labels=['Solvable', 'Non solvable'], autopct='%1.1f%%', startangle=90)
     st.sidebar.pyplot(fig)
-
-
-    #BarhChart
-    #plt.barh(targets, align='center')
-    #plt.show()
-    #st.sidebar.pyplot()
-
-    #fig, ax = plt.subplots(figsize(5,5))
-    #ax.barh(targets)
-    #st.sidebar.pyplot(fig)
-    test = sns.catplot(targets, kind="bar")
-
-    st.sidebar.pyplot(test.fig)
     
 
 
@@ -204,8 +191,91 @@ def main() :
     st.write("Sélection du numéro client :", chk_id)
 
 
+
+
+    
+
+
     #Informations du client : Genre, Age, Statut familial, Enfants...
     st.header("**Informations du client**")
+
+
+
+
+
+
+
+    #Affichage de la solvabilité du client
+    st.header("**Analyse du dossier client**")
+    prediction = load_prediction(sample, chk_id, clf)
+    #Calcul probabilite
+    #ppp = (round(float(prediction)*100,2))
+    #nb = round(float(prediction)*100)
+    #ppp2 = round(prediction*100)
+    predict = round(float(prediction)*100)
+    
+    #st.write("**Probabilité de défaut : **{:.0f} %".format(round(float(prediction)*100, 2)))
+    #st.markdown(''':rainbow['Probabilité de défaut']''')
+    #st.markdown(f""" Probabilité de défaut : {predict} """)
+    
+    #st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] </b> """, unsafe_allow_html=True)
+
+    if predict < 1 :
+        message = "Très faible"
+        couleur = "green "
+        st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] {message} </b> """, unsafe_allow_html=True)
+    elif predict < 5 :
+        message = "Faible"
+        couleur = "green "
+        st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] {message} </b> """, unsafe_allow_html=True)
+    elif predict < 10 :
+        message = "Moyen"
+        couleur = "Blue "
+        st.markdown(f""" Probabilité de risque de défaut : <b> :blue[{predict}%] {message} </b> """, unsafe_allow_html=True)
+    elif predict < 20 :
+        message = "Elevé"
+        couleur = "orange "
+        st.markdown(f""" Probabilité de risque de défaut : <b> :orange[{predict}%] {message} </b> """, unsafe_allow_html=True)
+    elif predict >= 20 :
+        message = "Très élevé"
+        couleur = "rouge"
+        st.markdown(f""" Probabilité de risque de défaut : <b> :red[{predict}%] {message} </b> """, unsafe_allow_html=True)   
+    
+    #st.markdown(f""" Probabilité de risque de défaut : <b> :{couleur}[{predict}%] {message} green[hola] </b> """, unsafe_allow_html=True)
+    #st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] </b> """, unsafe_allow_html=True)
+
+    #if predict < 10 :    
+    #    st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] </b> """, unsafe_allow_html=True)
+    #else :
+    #    st.markdown(f""" Probabilité de risque de défaut : <b> :red[{predict} %] </b> """, unsafe_allow_html=True)
+
+    #st.markdown(f"""Probabilité de défaut : {round(float(prediction)*100)} """)
+    #rainbow[colors]
+
+    #Compute decision according to the best threshold
+    #if prediction <= xx :
+    #    decision = "<font color='green'>**LOAN GRANTED**</font>" 
+    #else:
+    #    decision = "<font color='red'>**LOAN REJECTED**</font>"
+
+    #st.write("**Decision** *(with threshold xx%)* **: **", decision, unsafe_allow_html=True)
+
+    
+    #st.markdown("<u>Données du client:</u>", unsafe_allow_html=True)
+    #st.write(identite_client(data, chk_id))
+
+
+    st.markdown("<u>Données du client:</u>", unsafe_allow_html=True)
+    idcli = identite_client(data, chk_id)
+    idcli2 = idcli.copy()
+    idcli2.drop('TARGET', axis=1, inplace=True)
+    idcli2.insert(0, 'TARGET', idcli['TARGET'])
+    #st.write(idcli2)
+    st.table(idcli2)
+
+
+    
+    
 
     if st.checkbox("Afficher les informations du client ?"):
 
@@ -268,79 +338,7 @@ def main() :
     else:
         st.markdown("<i>…</i>", unsafe_allow_html=True)
 
-    #Affichage de la solvabilité du client
-    st.header("**Analyse du dossier client**")
-    prediction = load_prediction(sample, chk_id, clf)
-    #Calcul probabilite
-    #ppp = (round(float(prediction)*100,2))
-    #nb = round(float(prediction)*100)
-    #ppp2 = round(prediction*100)
-    predict = round(float(prediction)*100)
-    
-    #st.write("**Probabilité de défaut : **{:.0f} %".format(round(float(prediction)*100, 2)))
-    #st.markdown(''':rainbow['Probabilité de défaut']''')
-    #st.markdown(f""" Probabilité de défaut : {predict} """)
-    
-    #st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] </b> """, unsafe_allow_html=True)
-
-    
-
-    if predict < 1 :
-        message = "Très faible"
-        couleur = "green "
-        st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] {message} </b> """, unsafe_allow_html=True)
-    elif predict < 5 :
-        message = "Faible"
-        couleur = "green "
-        st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] {message} </b> """, unsafe_allow_html=True)
-    elif predict < 10 :
-        message = "Moyen"
-        couleur = "Blue "
-        st.markdown(f""" Probabilité de risque de défaut : <b> :blue[{predict}%] {message} </b> """, unsafe_allow_html=True)
-    elif predict < 20 :
-        message = "Elevé"
-        couleur = "orange "
-        st.markdown(f""" Probabilité de risque de défaut : <b> :orange[{predict}%] {message} </b> """, unsafe_allow_html=True)
-    elif predict >= 20 :
-        message = "Très élevé"
-        couleur = "rouge"
-        st.markdown(f""" Probabilité de risque de défaut : <b> :red[{predict}%] {message} </b> """, unsafe_allow_html=True)   
-    
-    #st.markdown(f""" Probabilité de risque de défaut : <b> :{couleur}[{predict}%] {message} green[hola] </b> """, unsafe_allow_html=True)
-    #st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] </b> """, unsafe_allow_html=True)
-
-    #if predict < 10 :    
-    #    st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] </b> """, unsafe_allow_html=True)
-    #else :
-    #    st.markdown(f""" Probabilité de risque de défaut : <b> :red[{predict} %] </b> """, unsafe_allow_html=True)
-
-
-    #st.markdown(f"""Probabilité de défaut : {round(float(prediction)*100)} """)
-    #rainbow[colors]
-
-    #Compute decision according to the best threshold
-    #if prediction <= xx :
-    #    decision = "<font color='green'>**LOAN GRANTED**</font>" 
-    #else:
-    #    decision = "<font color='red'>**LOAN REJECTED**</font>"
-
-    #st.write("**Decision** *(with threshold xx%)* **: **", decision, unsafe_allow_html=True)
-
-    
-    
-    #st.markdown("<u>Données du client:</u>", unsafe_allow_html=True)
-    #st.write(identite_client(data, chk_id))
-
-
-    st.markdown("<u>Données du client:</u>", unsafe_allow_html=True)
-    idcli = identite_client(data, chk_id)
-    idcli2 = idcli.copy()
-    idcli2.drop('TARGET', axis=1, inplace=True)
-    idcli2.insert(0, 'TARGET', idcli['TARGET'])
-    #st.write(idcli2)
-    st.table(idcli2)
-
-    
+        
     #Feature importance / description // supprimé
          
     
