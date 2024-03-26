@@ -183,8 +183,8 @@ def main() :
 
 
     #BarhChart
-    fig, ax = plt.subplots(figsize=(5,5))
     plt.barh(target, align='center')
+    plt.show()
     st.sidebar.pyplot(fig)
 
 
