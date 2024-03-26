@@ -180,7 +180,12 @@ def main() :
     fig, ax = plt.subplots(figsize=(5,5))
     plt.pie(targets, explode=[0, 0.1], labels=['Solvable', 'Non solvable'], autopct='%1.1f%%', startangle=90)
     st.sidebar.pyplot(fig)
-    
+
+
+    #BarhChart
+    fig, ax = plt.subplots(figsize=(5,5))
+    plt.barh(target, height=0.8, *, align='center')
+    st.sidebar.pyplot(fig)
 
 
     
