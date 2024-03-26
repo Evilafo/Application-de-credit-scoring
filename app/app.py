@@ -192,33 +192,11 @@ def main() :
 
 
 
-
-    
-
-
-    #Informations du client : Genre, Age, Statut familial, Enfants...
-    st.header("**Informations du client**")
-
-
-
-
-
-
-
     #Affichage de la solvabilité du client
     st.header("**Analyse du dossier client**")
     prediction = load_prediction(sample, chk_id, clf)
     #Calcul probabilite
-    #ppp = (round(float(prediction)*100,2))
-    #nb = round(float(prediction)*100)
-    #ppp2 = round(prediction*100)
     predict = round(float(prediction)*100)
-    
-    #st.write("**Probabilité de défaut : **{:.0f} %".format(round(float(prediction)*100, 2)))
-    #st.markdown(''':rainbow['Probabilité de défaut']''')
-    #st.markdown(f""" Probabilité de défaut : {predict} """)
-    
-    #st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] </b> """, unsafe_allow_html=True)
 
     if predict < 1 :
         message = "Très faible"
@@ -240,30 +218,6 @@ def main() :
         message = "Très élevé"
         couleur = "rouge"
         st.markdown(f""" Probabilité de risque de défaut : <b> :red[{predict}%] {message} </b> """, unsafe_allow_html=True)   
-    
-    #st.markdown(f""" Probabilité de risque de défaut : <b> :{couleur}[{predict}%] {message} green[hola] </b> """, unsafe_allow_html=True)
-    #st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] </b> """, unsafe_allow_html=True)
-
-    #if predict < 10 :    
-    #    st.markdown(f""" Probabilité de risque de défaut : <b> :rainbow[{predict} %] </b> """, unsafe_allow_html=True)
-    #else :
-    #    st.markdown(f""" Probabilité de risque de défaut : <b> :red[{predict} %] </b> """, unsafe_allow_html=True)
-
-    #st.markdown(f"""Probabilité de défaut : {round(float(prediction)*100)} """)
-    #rainbow[colors]
-
-    #Compute decision according to the best threshold
-    #if prediction <= xx :
-    #    decision = "<font color='green'>**LOAN GRANTED**</font>" 
-    #else:
-    #    decision = "<font color='red'>**LOAN REJECTED**</font>"
-
-    #st.write("**Decision** *(with threshold xx%)* **: **", decision, unsafe_allow_html=True)
-
-    
-    #st.markdown("<u>Données du client:</u>", unsafe_allow_html=True)
-    #st.write(identite_client(data, chk_id))
-
 
     st.markdown("<u>Données du client:</u>", unsafe_allow_html=True)
     idcli = identite_client(data, chk_id)
@@ -275,7 +229,8 @@ def main() :
 
 
     
-    
+    #Informations du client : Genre, Age, Statut familial, Enfants...
+    st.header("**Informations du client**")
 
     if st.checkbox("Afficher les informations du client ?"):
 
