@@ -156,7 +156,7 @@ def main() :
     st.sidebar.header("**Informations Generales**")
 
     #Loading selectbox
-    chk_id = st.sidebar.selectbox("ID du Client", id_client)
+    chk_id = st.sidebar.selectbox("Rechercher l'ID du Client", id_client)
 
     #Loading general info
     nb_credits, rev_moy, credits_moy, targets = load_infos_gen(data)
@@ -188,7 +188,7 @@ def main() :
     # PAGE D'ACCUEIL - CONTENU PRINCIPAL
     #######################################
     #ID du client Sidebar
-    st.write("Sélection du numéro client :", chk_id)
+    st.write("Numéro du client sélectionné:", chk_id)
 
 
 
