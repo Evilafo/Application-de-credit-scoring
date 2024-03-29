@@ -123,7 +123,8 @@ def main() :
 
     #Title display
     html_temp = """
-    <h1 style="text-align:center">Tableau de bord Scoring Credit📈💰 </h1>
+    <!--<h1 style="text-align:center">Tableau de bord Scoring Credit📈💰 </h1>-->
+    <h1 style="text-align:center">Tableau de bord Scoring Credit📈</h1>
     """
     html_temp2 = """
     <style>
