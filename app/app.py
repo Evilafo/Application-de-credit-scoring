@@ -302,8 +302,8 @@ def main() :
 
     #Similar customer files display
     chk_voisins = st.checkbox("Afficher les dossiers similaires ?")
-
-    if chk_voisins:
+    with st.expander("Afficher les dossiers similaires ?")
+    #if chk_voisins:
         #knn = load_knn(sample)
         #st.markdown("<u>Liste des 10 dossiers les plus proches de ce Client :</u>", unsafe_allow_html=True)
         #st.dataframe(load_kmeans(sample, chk_id, knn))
@@ -325,8 +325,8 @@ def main() :
 
 
     
-    else:
-        st.markdown("<i>…</i>", unsafe_allow_html=True)
+    #else:
+        #st.markdown("<i>…</i>", unsafe_allow_html=True)
         
         
     st.markdown('***')
