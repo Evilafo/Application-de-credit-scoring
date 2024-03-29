@@ -301,7 +301,7 @@ def main() :
     #Feature importance / description \\ supprimé
 
     #Similar customer files display
-    chk_voisins = st.checkbox("Afficher les dossiers similaires ?")
+    #chk_voisins = st.checkbox("Afficher les dossiers similaires ?")
     with st.expander("Afficher les dossiers similaires ?") :
     #if chk_voisins:
         #knn = load_knn(sample)
