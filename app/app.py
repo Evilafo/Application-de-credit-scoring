@@ -231,8 +231,9 @@ def main() :
     
     #Informations du client : Genre, Age, Statut familial, Enfants...
     st.header("**Informations du client**")
-
-    if st.checkbox("Afficher les informations du client ?"):
+    
+    with if st.checkbox("Afficher les informations du client ?"):
+    #if st.checkbox("Afficher les informations du client ?"):
 
         infos_client = identite_client(data, chk_id)
         code_genre = infos_client["CODE_GENDER"].values[0]
@@ -290,8 +291,8 @@ def main() :
 
         st.plotly_chart(fig)
     
-    else:
-        st.markdown("<i>…</i>", unsafe_allow_html=True)
+    #else:
+    #    st.markdown("<i>…</i>", unsafe_allow_html=True)
 
         
     #Feature importance / description // supprimé
