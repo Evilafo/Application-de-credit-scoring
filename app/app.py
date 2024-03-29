@@ -232,7 +232,7 @@ def main() :
     #Informations du client : Genre, Age, Statut familial, Enfants...
     st.header("**Informations du client**")
     
-    with if st.checkbox("Afficher les informations du client ?"):
+    with st.checkbox("Afficher les informations du client ?"):
     #if st.checkbox("Afficher les informations du client ?"):
 
         infos_client = identite_client(data, chk_id)
