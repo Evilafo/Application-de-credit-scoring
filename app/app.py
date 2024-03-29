@@ -302,7 +302,7 @@ def main() :
 
     #Similar customer files display
     chk_voisins = st.checkbox("Afficher les dossiers similaires ?")
-    with st.expander("Afficher les dossiers similaires ?")
+    with st.expander("Afficher les dossiers similaires ?") :
     #if chk_voisins:
         #knn = load_knn(sample)
         #st.markdown("<u>Liste des 10 dossiers les plus proches de ce Client :</u>", unsafe_allow_html=True)
