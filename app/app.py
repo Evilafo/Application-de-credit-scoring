@@ -185,7 +185,7 @@ def main() :
     #Copyright
     with st.sidebar:
         st.write("© Made by Evilafo 2023. All rights reserved.")
-        st.image('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKs8r8Zd_xOz-qdO6Mk9bQXGh-CP4kiHqJtIsZ2CP2Q&s', width=50, caption='Sunrise by the mountains')
+        st.image('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKs8r8Zd_xOz-qdO6Mk9bQXGh-CP4kiHqJtIsZ2CP2Q&s', width=50)
         st.image('https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg', width=50)
         st.image('https://www.kaggle.com/static/images/site-logo.svg', width=50)
 
