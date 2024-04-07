@@ -186,7 +186,9 @@ def main() :
     with st.sidebar:
         st.write("© Made by Evilafo 2023. All rights reserved.")
         st.image('https://upload.wikimedia.org/wikipedia/commons/d/d5/Facebook_F_icon.svg', width=50, caption='Sunrise by the mountains')
-    
+        st.image('https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg', width=50)
+        st.image('https://www.kaggle.com/static/images/site-logo.svg', width=50)
+
 
 
     
