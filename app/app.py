@@ -192,6 +192,7 @@ def main() :
         <a href="https://www.linkedin.com/in/emmanuel-evilafo-838734165"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKs8r8Zd_xOz-qdO6Mk9bQXGh-CP4kiHqJtIsZ2CP2Q&s" alt="icon" width="40" style="width: 40px; height: 40px; margin-right: 10px; margin-bottom: 0px;" /></a>
         <a href="https://www.kaggle.com/emmanuelevilafo"><img src="https://www.kaggle.com/static/images/site-logo.svg" alt="icon" height="40" style="height: 40px; margin-right: 0px; margin-bottom: 0px;" /></a></div>"""
         st.markdown(img_gallery, unsafe_allow_html=True)
+        st.empty()
         st.write("© Made by Evilafo 2023. All rights reserved.")
 
 
@@ -336,16 +337,14 @@ def main() :
 
     
 
-    
-
 
     
     #else:
         #st.markdown("<i>…</i>", unsafe_allow_html=True)
         
         
-    st.markdown('***')
-    st.markdown("Par Emmanuel Evilafo")
+    #st.markdown('***')
+    #st.markdown("Par Emmanuel Evilafo")
     #st.markdown("*Code from [Github](https://github.com/Evilafo)* ")
 
 
