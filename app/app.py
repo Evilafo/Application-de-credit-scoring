@@ -185,6 +185,7 @@ def main() :
     #Copyright
     with st.sidebar:
         st.write("© Made by Evilafo 2023. All rights reserved.")
+        st.image('https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg', caption='Sunrise by the mountains')
     
 
 
