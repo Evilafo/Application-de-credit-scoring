@@ -187,6 +187,7 @@ def main() :
 
     #Copyright
     with st.sidebar:
+        st.markdown("&nbsp; &nbsp; &nbsp;")
         img_gallery = """<div style="display: flex;">
         <a href="https://github.com/Evilafo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg" alt="icon" height="40" style="height: 40px;  margin-right: 10px" /></a>
         <a href="https://www.linkedin.com/in/emmanuel-evilafo-838734165"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKs8r8Zd_xOz-qdO6Mk9bQXGh-CP4kiHqJtIsZ2CP2Q&s" alt="icon" width="40" style="width: 40px; height: 40px; margin-right: 10px; margin-bottom: 0px;" /></a>
