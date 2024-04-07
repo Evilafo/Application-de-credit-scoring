@@ -8,6 +8,10 @@ import shap
 import plotly.express as px
 from zipfile import ZipFile
 from sklearn.cluster import KMeans
+
+from streamlit_image_gallery import st_image_gallery
+
+
 plt.style.use('fivethirtyeight')
 #sns.set()
 sns.set_theme(style="darkgrid")
@@ -190,7 +194,25 @@ def main() :
         st.image('https://www.kaggle.com/static/images/site-logo.svg', width=50)
 
 
+    with st.sidebar:
+        # Définir les URL des liens
+        urls = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKs8r8Zd_xOz-qdO6Mk9bQXGh-CP4kiHqJtIsZ2CP2Q&s", "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg", "https://www.kaggle.com/static/images/site-logo.svg"]
+        
+        # Charger les images
+        image1 = st.file_uploader("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKs8r8Zd_xOz-qdO6Mk9bQXGh-CP4kiHqJtIsZ2CP2Q&s")
+        image2 = st.file_uploader("https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg")
+        image3 = st.file_uploader("https://www.kaggle.com/static/images/site-logo.svg")
+        
+        if image1 and image2 and image3:
+          # Créer une liste d'images avec les liens
+          images = [{"image": image1, "url": url} for image, url in zip([image1, image2, image3], urls)]
+        
+          # Afficher la galerie d'images avec les liens
+          st_image_gallery(images)
 
+
+    
+    
     
     #######################################
     # PAGE D'ACCUEIL - CONTENU PRINCIPAL
