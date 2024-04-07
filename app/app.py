@@ -183,7 +183,8 @@ def main() :
     st.sidebar.pyplot(fig)
 
     #Copyright
-    © Made by Evilafo 2023. All rights reserved.
+    with st.sidebar:
+        st.write("© Made by Evilafo 2023. All rights reserved.")
     
 
 
