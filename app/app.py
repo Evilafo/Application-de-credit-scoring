@@ -195,9 +195,7 @@ def main() :
         img_gallery = """<div style="display: flex;">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKs8r8Zd_xOz-qdO6Mk9bQXGh-CP4kiHqJtIsZ2CP2Q&s" alt="icon" width="50" style="width: 50px; height: 50px; margin-right: 50px; margin-bottom: 0px;" />
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg" alt="icon" width="50" style="width: 50px; height: 50px; margin-right: 0px; margin-bottom: 0px;" />
-        <img src="https://www.kaggle.com/static/images/site-logo.svg" alt="icon" height="50" style="height: 50px;" />
-
-        </div>"""
+        <img src="https://www.kaggle.com/static/images/site-logo.svg" alt="icon" height="50" style="height: 50px" /> </div>"""
         st.markdown(img_gallery, unsafe_allow_html=True)
 
 
