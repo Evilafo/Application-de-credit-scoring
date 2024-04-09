@@ -1,6 +1,6 @@
 # Application de Crédit scoring : Prédiction de défaut de paiement
 
-Ce référentiel contient une application de scoring de crédit développée dans le cadre d'un projet académique. L'objectif de cette application est d'évaluer le risque de défaut de paiement d'un emprunteur potentiel en utilisant des données démographiques et financières.
+Ce référentiel contient une application de scoring de crédit. L'objectif de cette application est d'évaluer le risque de défaut de paiement d'un emprunteur potentiel en utilisant des données démographiques et financières.
 
 ## Données
 Les données utilisées dans cette application sont issues de la compétition [Kaggle Home Credit Default Risk](https://www.kaggle.com/competitions/home-credit-default-risk/data/ "Home Credit Defzult Risk"). 
@@ -21,6 +21,8 @@ Elles sont organisées dans le dossier data. Voici la liste des fichiers de donn
 ## Contribution
 Les contributions sont les bienvenues ! Si vous souhaitez améliorer cette application ou ajouter de nouvelles fonctionnalités, n'hésitez pas à soumettre une pull request.
 
+## L'application
+Visualiser l'application : http://creditscoring.evilafo.xyz/
 ## Licence
 Ce projet est sous licence MIT.
 
