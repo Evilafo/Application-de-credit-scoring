@@ -10,7 +10,6 @@ Elles sont organisées dans le dossier data. Voici la liste des fichiers de donn
 **application_train.csv**: Données d'entraînement contenant les informations sur les demandeurs de prêt.
 
 **application_test.csv**: Données de test pour lesquelles les participants doivent prédire le défaut de paiement.
-
 ...
 
 ## Fonctionnalités
