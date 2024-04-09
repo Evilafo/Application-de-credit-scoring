@@ -23,6 +23,6 @@ Les contributions sont les bienvenues ! Si vous souhaitez améliorer cette appli
 ## L'application
 Visualiser l'application : http://creditscoring.evilafo.xyz/
 ## Licence
-Ce projet est sous licence [MIT]().
+Ce projet est sous licence [MIT](https://github.com/Evilafo/Application-de-credit-scoring?tab=MIT-1-ov-file).
 
 
