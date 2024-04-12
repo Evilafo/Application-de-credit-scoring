@@ -196,6 +196,10 @@ def main() :
         st.markdown("&nbsp; &nbsp; &nbsp;")
         st.caption("© Made by Evilafo 2023. All rights reserved.")
         st.markdown('<h6>By <a href="https://github.com/Evilafo">Evilafo</a></h6>')
+        st.markdown(
+            '<h6>Made in &nbsp<img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit logo" height="16">&nbsp by <a href="https://twitter.com/andfanilo">@andfanilo</a></h6>',
+            unsafe_allow_html=True,
+        )
         
 
     
