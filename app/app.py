@@ -354,5 +354,5 @@ def main() :
 
 if __name__ == "__main__":
     st.set_page_config(
-        page_title="Streamlit ECharts Demo", page_icon=":chart_with_upwards_trend:")
+        page_title="Dashbord de Credit Scoring - Evilafo", layout="wide",page_icon='📊')
     main()
