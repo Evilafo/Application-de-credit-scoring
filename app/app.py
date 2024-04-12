@@ -211,7 +211,7 @@ def main() :
     #ID du client Sidebar
     st.write("Numéro du client sélectionné:", chk_id)
 
-    with header:
+    with st.header:
         st.success(
             """
             Read [the blog post on Streamlit's roadmap](https://blog.streamlit.io/the-next-frontier-for-streamlit/)
