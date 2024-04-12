@@ -196,7 +196,7 @@ def main() :
         st.markdown("&nbsp;")
         st.caption("© Made by Evilafo 2023. All rights reserved.")
         st.markdown(
-            '<h6>By <a href="https://github.com/Evilafo">Evilafo</a></h6>',
+            '<h6>By <a href="https://www.linkedin.com/in/emmanuel-evilafo-838734165">Evilafo</a></h6>',
             unsafe_allow_html=True,
         )
         
