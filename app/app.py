@@ -211,6 +211,15 @@ def main() :
     #ID du client Sidebar
     st.write("Numéro du client sélectionné:", chk_id)
 
+    with header:
+        st.success(
+            """
+            Read [the blog post on Streamlit's roadmap](https://blog.streamlit.io/the-next-frontier-for-streamlit/)
+            to understand our broader vision.
+            """,
+            icon="🗺",
+        )
+
 
 
     #Affichage de la solvabilité du client
