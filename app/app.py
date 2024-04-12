@@ -194,7 +194,8 @@ def main() :
         <a href="https://www.kaggle.com/emmanuelevilafo"><img src="https://www.kaggle.com/static/images/site-logo.svg" alt="icon" height="40" style="height: 40px; margin-right: 0px; margin-bottom: 0px;" /></a></div>"""
         st.markdown(img_gallery, unsafe_allow_html=True)
         st.markdown("&nbsp; &nbsp; &nbsp;")
-        st.write("© Made by Evilafo 2023. All rights reserved.")
+        st.caption("© Made by Evilafo 2023. All rights reserved.")
+        
 
     
     
