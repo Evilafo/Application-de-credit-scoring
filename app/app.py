@@ -208,15 +208,16 @@ def main() :
     #######################################
     # PAGE D'ACCUEIL - CONTENU PRINCIPAL
     #######################################
-    #ID du client Sidebar
-    st.write("Numéro du client sélectionné:", chk_id)
 
     st.success(
         """
         L'objectif de cette application est d'évaluer le risque de défaut de paiement d'un emprunteur potentiel en utilisant des données démographiques et financières.
         """,
-        icon="📊",
     )
+    
+    #ID du client Sidebar
+    st.write("Numéro du client sélectionné:", chk_id)
+
 
 
 
