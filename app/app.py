@@ -213,10 +213,9 @@ def main() :
 
     st.success(
         """
-        Read [the blog post on Streamlit's roadmap](https://blog.streamlit.io/the-next-frontier-for-streamlit/)
-        to understand our broader vision.
+        L'objectif de cette application est d'évaluer le risque de défaut de paiement d'un emprunteur potentiel en utilisant des données démographiques et financières.
         """,
-        icon="🗺",
+        icon="📊",
     )
 
 
