@@ -354,6 +354,7 @@ def main() :
     hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
+            .stActionButton {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """
