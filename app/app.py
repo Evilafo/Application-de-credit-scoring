@@ -355,11 +355,17 @@ def main() :
             <style>
             #MainMenu {visibility: hidden;}
             .stActionButton {visibility: hidden;}
+            .viewerBadge_link__qRIco {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """
     st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
+
+
+
+    #viewerBadge_container__r5tak styles_viewerBadge__CvC9N
+    
 
 
 
