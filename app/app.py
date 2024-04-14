@@ -358,6 +358,7 @@ def main() :
             .viewerBadge_link__qRIco {visibility: hidden;}
             .viewerBadge_container__r5tak {visibility: hidden;}
             .styles_viewerBadge__CvC9N {visibility: hidden;}
+            .viewerBadge_container__r5tak {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """
