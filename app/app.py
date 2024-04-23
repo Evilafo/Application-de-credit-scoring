@@ -335,7 +335,7 @@ def main() :
         plt.ylabel("Revenu Total", fontsize=18)
         
         # Afficher le nuage de points
-        fig, ax = plt.plot()
+        fig, ax = plt.subplot()
         st.pyplot(fig)
 
     
