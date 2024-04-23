@@ -300,27 +300,6 @@ def main() :
         st.pyplot(fig)
         
         #Relation Âge / Revenu Total graphique interactif
-        """
-        data_sk = data.reset_index(drop=False)
-        data_sk.DAYS_BIRTH = (data_sk['DAYS_BIRTH']/365).round(1)
-        fig, ax = plt.subplots(figsize=(10, 5))
-        fig = px.scatter(data_sk, x='DAYS_BIRTH', y="AMT_INCOME_TOTAL", 
-                         size="AMT_INCOME_TOTAL", color='CODE_GENDER',
-                         hover_data=['NAME_FAMILY_STATUS', 'CNT_CHILDREN', 'NAME_CONTRACT_TYPE', 'SK_ID_CURR'])
-
-        fig.update_layout({'plot_bgcolor':'#f0f0f0'}, 
-                          title={'text':"Relation Âge / Revenu Total", 'x':0.5, 'xanchor': 'center'}, 
-                          title_font=dict(size=20, family='Verdana'), legend=dict(y=1.1, orientation='h'))
-
-
-        fig.update_traces(marker=dict(line=dict(width=0.5, color='#3a352a')), selector=dict(mode='markers'))
-        fig.update_xaxes(showline=True, linewidth=2, linecolor='#f0f0f0', gridcolor='#cbcbcb',
-                         title="Age", title_font=dict(size=18, family='Verdana'))
-        fig.update_yaxes(showline=True, linewidth=2, linecolor='#f0f0f0', gridcolor='#cbcbcb',
-                         title="Revenu Total", title_font=dict(size=18, family='Verdana'))
-
-        st.plotly_chart(fig)
-        """
         data_sk = data.reset_index(drop=False)
         # Convertir les jours de naissance en années et arrondir à une décimale
         data_sk['DAYS_BIRTH'] = (data_sk['DAYS_BIRTH'] / 365).round(1)
