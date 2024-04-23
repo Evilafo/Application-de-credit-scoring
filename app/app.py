@@ -300,6 +300,7 @@ def main() :
         st.pyplot(fig)
         
         #Relation Âge / Revenu Total graphique interactif
+        """
         data_sk = data.reset_index(drop=False)
         data_sk.DAYS_BIRTH = (data_sk['DAYS_BIRTH']/365).round(1)
         fig, ax = plt.subplots(figsize=(10, 5))
@@ -319,6 +320,24 @@ def main() :
                          title="Revenu Total", title_font=dict(size=18, family='Verdana'))
 
         st.plotly_chart(fig)
+        """
+        data_sk = data.reset_index(drop=False)
+        # Convertir les jours de naissance en années et arrondir à une décimale
+        data_sk['DAYS_BIRTH'] = (data_sk['DAYS_BIRTH'] / 365).round(1)
+        
+        # Tracer le nuage de points avec Seaborn
+        plt.figure(figsize=(10, 5))
+        sns.scatterplot(data=data_sk, x='DAYS_BIRTH', y='AMT_INCOME_TOTAL', size='AMT_INCOME_TOTAL', hue='CODE_GENDER')
+        
+        # Personnaliser le titre et les étiquettes des axes
+        plt.title("Relation Âge / Revenu Total", fontsize=20)
+        plt.xlabel("Age", fontsize=18)
+        plt.ylabel("Revenu Total", fontsize=18)
+        
+        # Afficher le nuage de points
+        plt.show()
+
+    
     
     #else:
     #    st.markdown("<i>…</i>", unsafe_allow_html=True)
