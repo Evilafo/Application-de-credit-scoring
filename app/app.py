@@ -320,6 +320,20 @@ def main() :
 
         st.plotly_chart(fig)
 
+
+        #Relation Âge / Revenu Total graphique interactif
+        data_sk = data.reset_index(drop=False)
+        data_sk.DAYS_BIRTH = (data_sk['DAYS_BIRTH']/365).round(1)    
+        fig, ax = plt.subplots(figsize=(10, 5))
+        sns.scatterplot(data_sk, x="DAYS_BIRTH", y="AMT_INCOME_TOTAL", hue="size", palette="deep")
+
+        ax.set(title='Relation Âge / Revenu Total graphique interactif', xlabel=' ', ylabel='')
+        st.pyplot(fig)
+
+        
+
+
+    
     
     
     #else:
