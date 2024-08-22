@@ -211,7 +211,7 @@ def main() :
 
     st.success(
         """
-        L'objectif de cette application est d'évaluer le risque de défaut de paiement d'un emprunteur potentiel en utilisant des données démographiques et financières.
+        L'objectif de cette application est d'évaluer le risque de défaut de paiement d'un emprunteur potentiel en utilisant des données démographiques et financières. Le seuil est de 10%.
         """,
     )
     
@@ -226,8 +226,8 @@ def main() :
     prediction = load_prediction(sample, chk_id, clf)
     #Calcul probabilite
     predict = round(float(prediction)*100)
-    decisionsolvable = "Solvable"
-    decisionnonsolvable = "Non solvable"
+    decisionsolvable = "(Solvable)"
+    decisionnonsolvable = "(Non solvable)"
 
     if predict < 1 :
         message = "Très faible"
