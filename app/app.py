@@ -226,27 +226,29 @@ def main() :
     prediction = load_prediction(sample, chk_id, clf)
     #Calcul probabilite
     predict = round(float(prediction)*100)
+    decisionsolvable = "Solvable"
+    decisionnonsolvable = "Non solvable"
 
     if predict < 1 :
         message = "Très faible"
         couleur = "green "
-        st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] {message} </b> """, unsafe_allow_html=True)
+        st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] {message} :green[{decisionsolvable}] </b> """, unsafe_allow_html=True)
     elif predict < 5 :
         message = "Faible"
         couleur = "green "
-        st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] {message} </b> """, unsafe_allow_html=True)
+        st.markdown(f""" Probabilité de risque de défaut : <b> :green[{predict}%] {message} :green[{decisionsolvable}] </b> """, unsafe_allow_html=True)
     elif predict < 10 :
         message = "Moyen"
         couleur = "Blue "
-        st.markdown(f""" Probabilité de risque de défaut : <b> :blue[{predict}%] {message} </b> """, unsafe_allow_html=True)
+        st.markdown(f""" Probabilité de risque de défaut : <b> :blue[{predict}%] {message} :green[{decisionsolvable}] </b> """, unsafe_allow_html=True)
     elif predict < 20 :
         message = "Elevé"
         couleur = "orange "
-        st.markdown(f""" Probabilité de risque de défaut : <b> :orange[{predict}%] {message} </b> """, unsafe_allow_html=True)
+        st.markdown(f""" Probabilité de risque de défaut : <b> :orange[{predict}%] {message} :red[{decisionnonsolvable}] </b> """, unsafe_allow_html=True)
     elif predict >= 20 :
         message = "Très élevé"
         couleur = "rouge"
-        st.markdown(f""" Probabilité de risque de défaut : <b> :red[{predict}%] {message} </b> """, unsafe_allow_html=True)   
+        st.markdown(f""" Probabilité de risque de défaut : <b> :red[{predict}%] {message} :red[{decisionnonsolvable}] </b> """, unsafe_allow_html=True)   
 
     st.markdown("<u>Données du client:</u>", unsafe_allow_html=True)
     idcli = identite_client(data, chk_id)
