@@ -371,6 +371,8 @@ def main() :
 
     hide_streamlit_style = """
             <style>
+            ._profilePreview_gzau3_63{display : none}
+            ._link_gzau3_10{display : none}
             #MainMenu {visibility: hidden;}
             .stActionButton {visibility: hidden;}
             .viewerBadge_link__qRIco {visibility: hidden;}
