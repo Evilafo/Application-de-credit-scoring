@@ -30,10 +30,17 @@ def main():
             clf = pickle.load(f)
         return clf
 
-    def calculate_feature_importance(X, model):
-        importances = model.feature_importances_
-        feature_names = X.columns
-        return pd.Series(importances, index=feature_names)
+    @st.cache_resource
+    def knn_training(sample):
+        return KMeans(n_clusters=2).fit(sample)
+
+    @st.cache_data
+    def load_kmeans(sample, id, _knn):
+        data_client = sample.loc[[int(id)]]
+        neighbors = _knn.predict(data_client)
+        df_neighbors = pd.DataFrame(neighbors, index=data_client.index)
+        df_neighbors = pd.concat([df_neighbors, sample], axis=1)
+        return df_neighbors.iloc[:, 1:].sample(10)
 
     @st.cache_data
     def load_infos_gen(data):
@@ -48,12 +55,9 @@ def main():
         targets = data.TARGET.value_counts()
         return nb_credits, rev_moy, credits_moy, targets
 
-    def identite_client(data, id):
-        return data.loc[[int(id)]]
-
     @st.cache_data
     def load_age_population(data):
-        return round((data["DAYS_BIRTH"]/365), 2)
+        return round((data["DAYS_BIRTH"] / 365), 2)
 
     @st.cache_data
     def load_income_population(sample):
@@ -61,21 +65,10 @@ def main():
         return df_income[df_income['AMT_INCOME_TOTAL'] < 200000]
 
     @st.cache_data
-    def load_prediction(sample, id, clf):
+    def load_prediction(sample, id, _clf):
         X = sample.iloc[:, :-1]
-        return clf.predict_proba(X.loc[[int(id)]])[:,1]
-
-    @st.cache_resource
-    def knn_training(sample):
-        return KMeans(n_clusters=2).fit(sample)
-
-    @st.cache_data
-    def load_kmeans(sample, id, knn):
-        data_client = sample.loc[[int(id)]]
-        neighbors = knn.predict(data_client)
-        df_neighbors = pd.DataFrame(neighbors, index=data_client.index)
-        df_neighbors = pd.concat([df_neighbors, sample], axis=1)
-        return df_neighbors.iloc[:,1:].sample(10)
+        score = _clf.predict_proba(X.loc[[int(id)]])[:, 1]
+        return score
 
     # Chargement initial des données
     data, sample, target, description = load_data()
@@ -123,7 +116,7 @@ def main():
 
     # Loading general info
     nb_credits, rev_moy, credits_moy, targets = load_infos_gen(data)
-    fig, ax = plt.subplots(figsize=(5,5))
+    fig, ax = plt.subplots(figsize=(5, 5))
     plt.pie(targets, explode=[0, 0.1], labels=['Solvable', 'Non solvable'], autopct='%1.1f%%', startangle=90)
     st.sidebar.pyplot(fig)
 
@@ -155,7 +148,7 @@ def main():
     # Affichage de la solvabilité du client
     st.header("**Analyse du dossier client**")
     prediction = load_prediction(sample, chk_id, clf)
-    predict = round(float(prediction)*100)
+    predict = round(float(prediction) * 100)
     decisionsolvable = "(Solvable)"
     decisionnonsolvable = "(Non solvable)"
 
@@ -176,7 +169,7 @@ def main():
 
     # Données du client
     st.markdown("<u>Données du client:</u>", unsafe_allow_html=True)
-    idcli = identite_client(data, chk_id)
+    idcli = data.loc[[int(chk_id)]]
     idcli2 = idcli.copy()
     idcli2.insert(0, 'TARGET', idcli.pop('TARGET'))
     st.table(idcli2)
@@ -184,9 +177,9 @@ def main():
     # Informations détaillées du client
     st.header("**Informations du client**")
     with st.expander("Afficher les informations du client ?"):
-        infos_client = identite_client(data, chk_id)
+        infos_client = idcli
         st.markdown(f"**Genre :** {infos_client['CODE_GENDER'].values[0]}")
-        st.markdown(f"**Age :** {int(infos_client['DAYS_BIRTH']/365)} ans")
+        st.markdown(f"**Age :** {int(infos_client['DAYS_BIRTH'] / 365)} ans")
         st.markdown(f"**Statut familial :** {infos_client['NAME_FAMILY_STATUS'].values[0]}")
         st.markdown(f"**Nombre d'enfant :** {int(infos_client['CNT_CHILDREN'].values[0])}")
 
@@ -215,12 +208,12 @@ def main():
 
         # Relation Âge / Revenu Total graphique interactif
         data_sk = data.reset_index(drop=False)
-        data_sk.DAYS_BIRTH = (data_sk['DAYS_BIRTH']/365).round(1)
+        data_sk.DAYS_BIRTH = (data_sk['DAYS_BIRTH'] / 365).round(1)
         fig = px.scatter(data_sk, x='DAYS_BIRTH', y="AMT_INCOME_TOTAL", 
                          size="AMT_INCOME_TOTAL", color='CODE_GENDER',
                          hover_data=['NAME_FAMILY_STATUS', 'CNT_CHILDREN', 'NAME_CONTRACT_TYPE', 'SK_ID_CURR'])
-        fig.update_layout({'plot_bgcolor':'#f0f0f0'}, 
-                          title={'text':"Relation Âge / Revenu Total", 'x':0.5, 'xanchor': 'center'}, 
+        fig.update_layout({'plot_bgcolor': '#f0f0f0'}, 
+                          title={'text': "Relation Âge / Revenu Total", 'x': 0.5, 'xanchor': 'center'}, 
                           title_font=dict(size=20, family='Verdana'), legend=dict(y=1.1, orientation='h'))
         fig.update_traces(marker=dict(line=dict(width=0.5, color='#3a352a')), selector=dict(mode='markers'))
         fig.update_xaxes(showline=True, linewidth=2, linecolor='#f0f0f0', gridcolor='#cbcbcb',
