@@ -229,6 +229,8 @@ def main() :
     decisionsolvable = "(Solvable)"
     decisionnonsolvable = "(Non solvable)"
 
+    st.markdown(f""" Score : {prediction} """, unsafe_allow_html=True)
+
     if predict < 1 :
         message = "Très faible"
         couleur = "green "
