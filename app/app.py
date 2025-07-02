@@ -37,6 +37,12 @@ def main():
         return knn
 
     @st.cache_data
+    def calculate_feature_importance(X, model):
+        importances = model.feature_importances_
+        feature_names = X.columns
+        return pd.Series(importances, index=feature_names)
+
+    @st.cache_data
     def load_infos_gen(data):
         lst_infos = [data.shape[0],
                      round(data["AMT_INCOME_TOTAL"].mean(), 2),
@@ -54,7 +60,7 @@ def main():
 
     @st.cache_data
     def load_age_population(data):
-        data_age = round((data["DAYS_BIRTH"]/365), 2)
+        data_age = round((data["DAYS_BIRTH"] / 365), 2)
         return data_age
 
     @st.cache_data
@@ -140,14 +146,14 @@ def main():
     with st.sidebar:
         st.markdown("&nbsp; &nbsp; &nbsp;")
         img_gallery = """<div style="display: flex;">
-        <a href="https://github.com/Evilafo  "><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg  " alt="icon" height="40" style="height: 40px;  margin-right: 10px" /></a>
-        <a href="https://www.linkedin.com/in/emmanuel-evilafo-838734165  "><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKs8r8Zd_xOz-qdO6Mk9bQXGh-CP4kiHqJtIsZ2CP2Q&s" alt="icon" width="40" style="width: 40px; height: 40px; margin-right: 10px; margin-bottom: 0px;" /></a>
-        <a href="  https://www.kaggle.com/emmanuelevilafo  "><img src="https://www.kaggle.com/static/images/site-logo.svg  " alt="icon" height="40" style="height: 40px; margin-right: 0px; margin-bottom: 0px;" /></a></div>"""
+        <a href="https://github.com/Evilafo "><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg " alt="icon" height="40" style="height: 40px;  margin-right: 10px" /></a>
+        <a href="https://www.linkedin.com/in/emmanuel-evilafo-838734165 "><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKs8r8Zd_xOz-qdO6Mk9bQXGh-CP4kiHqJtIsZ2CP2Q&s" alt="icon" width="40" style="width: 40px; height: 40px; margin-right: 10px; margin-bottom: 0px;" /></a>
+        <a href=" https://www.kaggle.com/emmanuelevilafo "><img src="https://www.kaggle.com/static/images/site-logo.svg " alt="icon" height="40" style="height: 40px; margin-right: 0px; margin-bottom: 0px;" /></a></div>"""
         st.markdown(img_gallery, unsafe_allow_html=True)
         st.markdown("&nbsp;")
         st.caption("© Made by Evilafo 2023. All rights reserved.")
         st.markdown(
-            '<h6>By <a href="https://www.linkedin.com/in/emmanuel-evilafo-838734165  ">Evilafo</a></h6>',
+            '<h6>By <a href="https://www.linkedin.com/in/emmanuel-evilafo-838734165 ">Evilafo</a></h6>',
             unsafe_allow_html=True,
         )
 
