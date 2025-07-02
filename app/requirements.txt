@@ -8,3 +8,4 @@ requests
 pillow
 scikit_learn
 lightgbm
+shap
