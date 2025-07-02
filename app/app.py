@@ -13,7 +13,7 @@ plt.style.use('fivethirtyeight')
 sns.set_theme(style="darkgrid")
 
 def main():
-    @st.cache
+    @st.cache_data
     def load_data():
         z = ZipFile("data/default_risk.zip")
         data = pd.read_csv(z.open('default_risk.csv'), index_col='SK_ID_CURR', encoding='utf-8')
@@ -24,23 +24,19 @@ def main():
         target = data.iloc[:, -1:]
         return data, sample, target, description
 
+    @st.cache_resource
     def load_model():
         '''Chargement du modèle entraîné'''
         pickle_in = open('model/LGBMClassifier.pkl', 'rb') 
         clf = pickle.load(pickle_in)
         return clf
 
-    @st.cache(allow_output_mutation=True)
+    @st.cache_resource
     def load_knn(sample):
         knn = knn_training(sample)
         return knn
 
-    def calculate_feature_importance(X, model):
-        importances = model.feature_importances_
-        feature_names = X.columns
-        return pd.Series(importances, index=feature_names)
-
-    @st.cache
+    @st.cache_data
     def load_infos_gen(data):
         lst_infos = [data.shape[0],
                      round(data["AMT_INCOME_TOTAL"].mean(), 2),
@@ -51,28 +47,29 @@ def main():
         targets = data.TARGET.value_counts()
         return nb_credits, rev_moy, credits_moy, targets
 
+    @st.cache_data
     def identite_client(data, id):
         data_client = data[data.index == int(id)]
         return data_client
 
-    @st.cache
+    @st.cache_data
     def load_age_population(data):
         data_age = round((data["DAYS_BIRTH"]/365), 2)
         return data_age
 
-    @st.cache
+    @st.cache_data
     def load_income_population(sample):
         df_income = pd.DataFrame(sample["AMT_INCOME_TOTAL"])
         df_income = df_income.loc[df_income['AMT_INCOME_TOTAL'] < 200000, :]
         return df_income
 
-    @st.cache
+    @st.cache_data
     def load_prediction(sample, id, clf):
         X = sample.iloc[:, :-1]
         score = clf.predict_proba(X[X.index == int(id)])[:, 1]
         return score
 
-    @st.cache
+    @st.cache_data
     def load_kmeans(sample, id, mdl):
         index = sample[sample.index == int(id)].index.values
         index = index[0]
@@ -81,7 +78,7 @@ def main():
         df_neighbors = pd.concat([df_neighbors, data], axis=1)
         return df_neighbors.iloc[:, 1:].sample(10)
 
-    @st.cache
+    @st.cache_data
     def knn_training(sample):
         knn = KMeans(n_clusters=2).fit(sample)
         return knn
@@ -92,7 +89,7 @@ def main():
     clf = load_model()
 
     # Création de l'explainer SHAP
-    @st.cache(allow_output_mutation=True)
+    @st.cache_resource
     def load_shap_explainer(clf, sample):
         explainer = shap.TreeExplainer(clf)
         shap_values = explainer.shap_values(sample.iloc[:, :-1])
@@ -143,14 +140,14 @@ def main():
     with st.sidebar:
         st.markdown("&nbsp; &nbsp; &nbsp;")
         img_gallery = """<div style="display: flex;">
-        <a href="https://github.com/Evilafo "><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg " alt="icon" height="40" style="height: 40px;  margin-right: 10px" /></a>
-        <a href="https://www.linkedin.com/in/emmanuel-evilafo-838734165 "><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKs8r8Zd_xOz-qdO6Mk9bQXGh-CP4kiHqJtIsZ2CP2Q&s" alt="icon" width="40" style="width: 40px; height: 40px; margin-right: 10px; margin-bottom: 0px;" /></a>
-        <a href=" https://www.kaggle.com/emmanuelevilafo "><img src="https://www.kaggle.com/static/images/site-logo.svg " alt="icon" height="40" style="height: 40px; margin-right: 0px; margin-bottom: 0px;" /></a></div>"""
+        <a href="https://github.com/Evilafo  "><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg  " alt="icon" height="40" style="height: 40px;  margin-right: 10px" /></a>
+        <a href="https://www.linkedin.com/in/emmanuel-evilafo-838734165  "><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKs8r8Zd_xOz-qdO6Mk9bQXGh-CP4kiHqJtIsZ2CP2Q&s" alt="icon" width="40" style="width: 40px; height: 40px; margin-right: 10px; margin-bottom: 0px;" /></a>
+        <a href="  https://www.kaggle.com/emmanuelevilafo  "><img src="https://www.kaggle.com/static/images/site-logo.svg  " alt="icon" height="40" style="height: 40px; margin-right: 0px; margin-bottom: 0px;" /></a></div>"""
         st.markdown(img_gallery, unsafe_allow_html=True)
         st.markdown("&nbsp;")
         st.caption("© Made by Evilafo 2023. All rights reserved.")
         st.markdown(
-            '<h6>By <a href="https://www.linkedin.com/in/emmanuel-evilafo-838734165 ">Evilafo</a></h6>',
+            '<h6>By <a href="https://www.linkedin.com/in/emmanuel-evilafo-838734165  ">Evilafo</a></h6>',
             unsafe_allow_html=True,
         )
 
@@ -170,9 +167,7 @@ def main():
     predict = round(float(prediction) * 100)
     decisionsolvable = "(Solvable)"
     decisionnonsolvable = "(Non solvable)"
-    
     st.markdown(f""" Score : {prediction} """, unsafe_allow_html=True)
-    
     if predict < 1:
         message = "Très faible"
         couleur = "green "
@@ -193,7 +188,6 @@ def main():
         message = "Très élevé"
         couleur = "rouge"
         st.markdown(f""" Probabilité de risque de défaut : <b> :red[{predict}%] {message} :red[{decisionnonsolvable}] </b> """, unsafe_allow_html=True)
-
     st.markdown("<u>Données du client:</u>", unsafe_allow_html=True)
     idcli = identite_client(data, chk_id)
     idcli2 = idcli.copy()
